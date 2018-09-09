@@ -15,27 +15,27 @@
 *   along with LCRail.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import QtQuick 2.2
 import "../UC"
-import "../components"
 
-Page {
-    PlatformFlickable {
-        anchors.fill: parent
-        contentHeight: column.height
+TopMenu {
+    MenuItem {
+        text: "About"
+        onClicked: {
+            console.log("About clicked!")
+        }
+    }
 
-        Column {
-            id: column
-            width: parent.width
+    MenuItem {
+        text: "Vehicle"
+        onClicked: {
+            console.log("Vehicle clicked!")
+        }
+    }
 
-            PageHeader {
-                title: "LCRail"
-                menu: Menu {
-                    busy: true
-                }
-            }
-
-            ConnectionSelector {}
+    MenuItem {
+        text: "Liveboard"
+        onClicked: {
+            console.log("Liveboard clicked!")
         }
     }
 }

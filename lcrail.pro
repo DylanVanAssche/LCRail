@@ -92,7 +92,9 @@ DISTFILES += qml/lcrail.qml \
     qml/universal-components/ubuntu/UC/TextArea.qml \
     qml/universal-components/ubuntu/UC/TextField.qml \
     qml/universal-components/ubuntu/UC/VerticalScrollDecorator.qml \
-    qml/universal-components/tests/README.rst
+    qml/universal-components/tests/README.rst \
+    qml/components/Menu.qml \
+    qml/components/ConnectionSelector.qml
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 

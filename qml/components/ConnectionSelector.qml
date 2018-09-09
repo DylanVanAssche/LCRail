@@ -17,25 +17,44 @@
 
 import QtQuick 2.2
 import "../UC"
-import "../components"
 
-Page {
-    PlatformFlickable {
-        anchors.fill: parent
-        contentHeight: column.height
+Column {
+    width: parent.width
+
+    Row {
+        width: parent.width
 
         Column {
-            id: column
-            width: parent.width
+            id: selectors
+            width: parent.width*(2/3)
 
-            PageHeader {
-                title: "LCRail"
-                menu: Menu {
-                    busy: true
+            BackgroundRectangle {
+                width: parent.width
+
+                Label {
+                    anchors.centerIn: parent
+                    text: "From"
                 }
             }
 
-            ConnectionSelector {}
+            BackgroundRectangle {
+                width: parent.width
+
+                Label {
+                    anchors.centerIn: parent
+                    text: "To"
+                }
+            }
+        }
+
+        BackgroundRectangle {
+            width: parent.width/3
+            height: selectors.height
+
+            Label {
+                anchors.centerIn: parent
+                text: "SWITCH"
+            }
         }
     }
 }
