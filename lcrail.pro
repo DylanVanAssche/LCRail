@@ -16,7 +16,17 @@ CONFIG += sailfishapp
 
 SOURCES += src/lcrail.cpp
 
-QML_IMPORT_PATH += qml/universal-components
+# QRail library build location
+CONFIG(debug, debug|release) {
+    QRAIL_LOCATION = $$PWD/../QRail/build/debug
+}
+else {
+    QRAIL_LOCATION = $$PWD/../QRail/build/release
+}
+LIBS += $$QRAIL_LOCATION/libqrail.a
+
+## Headers include path of the QRail library
+INCLUDEPATH += $$PWD/../QRail/src/include
 
 DISTFILES += qml/lcrail.qml \
     qml/cover/CoverPage.qml \
