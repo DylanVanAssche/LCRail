@@ -12,7 +12,16 @@
 # The name of your application
 TARGET = lcrail
 
-CONFIG += sailfishapp
+# QMake config
+CONFIG += sailfishapp \
+        c++11
+
+# Qt modules
+QT += core \
+    network \
+    positioning \
+    concurrent \
+sql
 
 SOURCES += src/lcrail.cpp
 
@@ -26,7 +35,8 @@ else {
 LIBS += $$QRAIL_LOCATION/libqrail.a
 
 ## Headers include path of the QRail library
-INCLUDEPATH += $$PWD/../QRail/src/include
+INCLUDEPATH += $$PWD/../QRail/src/include \
+    $$PWD/../QRail/qtcsv/include
 
 DISTFILES += qml/lcrail.qml \
     qml/cover/CoverPage.qml \

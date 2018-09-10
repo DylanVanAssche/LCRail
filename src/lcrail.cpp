@@ -9,6 +9,7 @@
 
 int main(int argc, char *argv[])
 {
+    initQRail();
     // SailfishApp::main() will display "qml/LCRail.qml", if you need more
     // control over initialization, you can use:
     //
