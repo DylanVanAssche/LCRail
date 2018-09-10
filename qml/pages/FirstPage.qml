@@ -26,16 +26,18 @@ Page {
 
     Liveboard {
         id: liveboard
-        onBoardChanged: entriesList.model = liveboard
+        onBoardChanged: {
+            entriesList.model = liveboard
+            entriesList.visible = true
+        }
         onBusyChanged: {
             if(!busy) {
                 after = new Date();
-                console.debug("Bad benchmark: " + (after.getTime() - before.getTime()) + "ms")
+                progressText.text = "Finished in: " + (after.getTime() - before.getTime()) + "ms" // Ugly benchmark, use something better please! -> QElapsedTimer
             }
-
             console.debug("Busy?" + busy)
         }
-        onProgressUpdated: progressText.text = uri.toString().replace("https://graph.irail.be/sncb/connections?departureTime=", "");
+        onProgressUpdated: progressText.text = "Page=" + uri.toString().replace("https://graph.irail.be/sncb/connections?departureTime=", "");
     }
 
     PlatformFlickable {
@@ -54,17 +56,21 @@ Page {
                 }
             }
 
-            Label {
-                id: progressText
-            }
-
-            Rectangle {
+            Row {
+                spacing: 25
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: 100
-                height: 100
-                radius: parent.width/2
-                color: liveboard.busy? "red": "green"
-                opacity: 0.75
+
+                Label {
+                    id: progressText
+                }
+
+                Rectangle {
+                    width: 100
+                    height: 100
+                    radius: parent.width/2
+                    color: liveboard.busy? "red": "green"
+                    opacity: 0.75
+                }
             }
 
             Button {
@@ -73,14 +79,15 @@ Page {
                 text: "GET liveboard"
                 onClicked: {
                     before = new Date();
-                    liveboard.getBoard("http://irail.be/stations/NMBS/008814332");
+                    entriesList.visible = false;
+                    liveboard.getBoard("http://irail.be/stations/NMBS/008811189"); // Vilvoorde
                 }
             }
 
             PlatformListView {
                 id: entriesList
                 width: parent.width
-                height: 1000 // Ugly
+                height: 1100 // Ugly
                 clip: true // Only paint within it's borders
                 delegate: Label {
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -90,7 +97,7 @@ Page {
                 VerticalScrollDecorator {}
             }
 
-            ConnectionSelector {}
+            //ConnectionSelector {}
         }
     }
 }
