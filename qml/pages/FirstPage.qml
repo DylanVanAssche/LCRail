@@ -26,7 +26,7 @@ Page {
 
     Liveboard {
         id: liveboard
-        onBoardChanged: console.debug("Liveboard received in QML");
+        onBoardChanged: entriesList.model = liveboard
         onBusyChanged: {
             if(!busy) {
                 after = new Date();
@@ -45,6 +45,7 @@ Page {
         Column {
             id: column
             width: parent.width
+            spacing: 50 // Use proper Theme object, needs implementation in UC TO DO
 
             PageHeader {
                 title: "LCRail"
@@ -67,12 +68,26 @@ Page {
             }
 
             Button {
+                id: getButton
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: "GET liveboard"
                 onClicked: {
                     before = new Date();
                     liveboard.getBoard("http://irail.be/stations/NMBS/008814332");
                 }
+            }
+
+            PlatformListView {
+                id: entriesList
+                width: parent.width
+                height: 1000 // Ugly
+                clip: true // Only paint within it's borders
+                delegate: Label {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: model.headsign + " " + model.departureTime.toTimeString() // QDateTime is automatically converted, see https://doc.qt.io/qt-5/qtqml-cppintegration-data.html
+                }
+
+                VerticalScrollDecorator {}
             }
 
             ConnectionSelector {}
