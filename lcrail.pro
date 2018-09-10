@@ -23,7 +23,8 @@ QT += core \
     concurrent \
 sql
 
-SOURCES += src/lcrail.cpp
+SOURCES += src/lcrail.cpp \
+    src/models/liveboard.cpp
 
 # QRail library build location
 CONFIG(debug, debug|release) {
@@ -127,3 +128,6 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/lcrail-de.ts
+
+HEADERS += \
+    src/models/liveboard.h

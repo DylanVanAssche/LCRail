@@ -5,7 +5,9 @@
 #include <sailfishapp.h>
 #include <QQmlEngine>
 #include <QUrl>
-#include "engines/station/stationfactory.h"
+
+#include "qrail.h"
+#include "models/liveboard.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,8 +21,8 @@ int main(int argc, char *argv[])
     //   - SailfishApp::pathToMainQml() to get a QUrl to the main QML file
     //
     // To display the view, call "show()" (will show fullscreen on device).
-    QRail::StationEngine::Factory *factory = QRail::StationEngine::Factory::getInstance();
-    factory->getStationByURI(QUrl("https://irail.be/stations/NMBS/008812005"));
+    Liveboard *liveboardView = new Liveboard();
+    liveboardView->getBoard(QUrl("https://irail.be/stations/NMBS/008812005"));
 
     return SailfishApp::main(argc, argv);
 }
