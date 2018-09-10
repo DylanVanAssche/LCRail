@@ -12,11 +12,32 @@
 # The name of your application
 TARGET = lcrail
 
-CONFIG += sailfishapp
+# QMake config
+CONFIG += sailfishapp \
+        c++11
 
-SOURCES += src/lcrail.cpp
+# Qt modules
+QT += core \
+    network \
+    positioning \
+    concurrent \
+sql
 
-QML_IMPORT_PATH += qml/universal-components
+SOURCES += src/lcrail.cpp \
+    src/models/liveboard.cpp
+
+# QRail library build location
+CONFIG(debug, debug|release) {
+    QRAIL_LOCATION = $$PWD/../QRail/build/debug
+}
+else {
+    QRAIL_LOCATION = $$PWD/../QRail/build/release
+}
+LIBS += $$QRAIL_LOCATION/libqrail.a
+
+## Headers include path of the QRail library
+INCLUDEPATH += $$PWD/../QRail/src/include \
+    $$PWD/../QRail/qtcsv/include
 
 DISTFILES += qml/lcrail.qml \
     qml/cover/CoverPage.qml \
@@ -107,3 +128,6 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/lcrail-de.ts
+
+HEADERS += \
+    src/models/liveboard.h

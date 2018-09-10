@@ -4,9 +4,14 @@
 
 #include <sailfishapp.h>
 #include <QQmlEngine>
+#include <QUrl>
+
+#include "qrail.h"
+#include "models/liveboard.h"
 
 int main(int argc, char *argv[])
 {
+    initQRail();
     // SailfishApp::main() will display "qml/LCRail.qml", if you need more
     // control over initialization, you can use:
     //
@@ -16,7 +21,9 @@ int main(int argc, char *argv[])
     //   - SailfishApp::pathToMainQml() to get a QUrl to the main QML file
     //
     // To display the view, call "show()" (will show fullscreen on device).
-
+    qmlRegisterUncreatableType<QRail::LiveboardEngine::Board>("LCRail.Models.Liveboard.Board", 1, 0, "Board", "read only");
+    qmlRegisterUncreatableType<QRail::StationEngine::Station>("LCRail.Models.Station", 1, 0, "Station", "read only");
+    qmlRegisterType<Liveboard>("LCRail.Views.Liveboard", 1, 0, "Liveboard");
 
     return SailfishApp::main(argc, argv);
 }
