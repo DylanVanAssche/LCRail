@@ -57,8 +57,10 @@ public:
     QDateTime from() const;
     QDateTime until() const;
     bool isBusy() const;
-    void getBoard(QRail::StationEngine::Station *station);
-    void getBoard(const QUrl &uri);
+    Q_INVOKABLE void getBoard(QRail::StationEngine::Station *station,
+                  const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
+    Q_INVOKABLE void getBoard(const QUrl &uri,
+                  const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
 
 protected:
     QHash<int, QByteArray> roleNames() const;
@@ -70,12 +72,16 @@ signals:
     void stationChanged();
     void fromChanged();
     void untilChanged();
+    void progressUpdated(const QUrl &uri, const qint16 &progress);
+    void error(const QString &message);
 
 private slots:
-    void processBoard(QRail::LiveboardEngine::Board *board);
+    void handleBoard(QRail::LiveboardEngine::Board *board);
+    void handleProcessing(const QUrl &uri);
 
 private:
     bool m_busy;
+    qint16 m_previousProgress;
     QRail::LiveboardEngine::Board *m_board;
     QRail::LiveboardEngine::Factory *m_factory;
     void setBusy(const bool &busy);

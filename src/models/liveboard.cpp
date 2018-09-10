@@ -21,8 +21,58 @@ Liveboard::Liveboard(QObject *parent): QAbstractListModel(parent)
     // Register custom types to the Qt meta object system
     qRegisterMetaType<QRail::VehicleEngine::Stop::Type>("QRail::VehicleEngine::Stop::Type");
     qRegisterMetaType<QRail::VehicleEngine::Stop::OccupancyLevel>("QRail::VehicleEngine::Stop::OccupancyLevel");
+
+    // Retrieve the QRail::LiveboardEngine::Factory instance and connect it's signals
     m_factory = QRail::LiveboardEngine::Factory::getInstance();
-    connect(m_factory, SIGNAL(finished(QRail::LiveboardEngine::Board*)), this, SLOT(processBoard(QRail::LiveboardEngine::Board*)));
+    connect(m_factory,
+            SIGNAL(finished(QRail::LiveboardEngine::Board*)),
+            this,
+            SLOT(handleBoard(QRail::LiveboardEngine::Board*)));
+    connect(m_factory,
+            SIGNAL(progress(QUrl, qint16)),
+            this,
+            SIGNAL(progressUpdated(QUrl, qint16)));
+    connect(m_factory,
+            SIGNAL(processing(QUrl)),
+            this,
+            SLOT(handleProcessing(QUrl)));
+    connect(m_factory,
+            SIGNAL(error(QString)),
+            this,
+            SIGNAL(error(QString)));
+}
+
+// Invokers
+void Liveboard::getBoard(QRail::StationEngine::Station *station, const QRail::LiveboardEngine::Board::Mode &mode)
+{
+    m_factory->getLiveboardByStationURI(station->uri(), mode);
+}
+
+void Liveboard::getBoard(const QUrl &uri, const QRail::LiveboardEngine::Board::Mode &mode)
+{
+    m_factory->getLiveboardByStationURI(uri, mode);
+}
+
+// Helpers
+QHash<int, QByteArray> Liveboard::roleNames() const
+{
+    QHash<int, QByteArray> roles;
+    roles[URIRole] = "URI";
+    roles[tripURIRole] = "tripURIRole";
+    roles[headsignRole] = "headsign";
+    roles[arrivalTimeRole] = "arrivalTime";
+    roles[arrivalDelayRole] = "arrivalDelay";
+    roles[isArrivalCanceledRole] = "isArrivalCanceled";
+    roles[departureTimeRole] = "departureTime";
+    roles[departureDelayRole] = "departureDelay";
+    roles[isDepartureCanceledRole] = "isDepartureCanceled";
+    roles[platformRole] = "platform";
+    roles[isPlatformNormalRole] = "isPlatformNormal";
+    roles[hasLeftRole] = "hasLeft";
+    roles[stopTypeRole] = "stopType";
+    roles[occupancyLevelRole] = "occupancy";
+    roles[isExtraStopRole] = "isExtraStop";
+    return roles;
 }
 
 int Liveboard::rowCount(const QModelIndex &) const
@@ -72,50 +122,30 @@ QVariant Liveboard::data(const QModelIndex &index, int role) const
     }
 }
 
-// Invokers
-void Liveboard::getBoard(QRail::StationEngine::Station *station)
-{
-    m_factory->getLiveboardByStationURI(station->uri());
-}
-
-void Liveboard::getBoard(const QUrl &uri)
-{
-    m_factory->getLiveboardByStationURI(uri);
-}
-
-QHash<int, QByteArray> Liveboard::roleNames() const
-{
-    QHash<int, QByteArray> roles;
-    roles[URIRole] = "URI";
-    roles[tripURIRole] = "tripURIRole";
-    roles[headsignRole] = "headsign";
-    roles[arrivalTimeRole] = "arrivalTime";
-    roles[arrivalDelayRole] = "arrivalDelay";
-    roles[isArrivalCanceledRole] = "isArrivalCanceled";
-    roles[departureTimeRole] = "departureTime";
-    roles[departureDelayRole] = "departureDelay";
-    roles[isDepartureCanceledRole] = "isDepartureCanceled";
-    roles[platformRole] = "platform";
-    roles[isPlatformNormalRole] = "isPlatformNormal";
-    roles[hasLeftRole] = "hasLeft";
-    roles[stopTypeRole] = "stopType";
-    roles[occupancyLevelRole] = "occupancy";
-    roles[isExtraStopRole] = "isExtraStop";
-    return roles;
-}
-
 // Processors
-void Liveboard::processBoard(QRail::LiveboardEngine::Board *board)
+void Liveboard::handleBoard(QRail::LiveboardEngine::Board *board)
 {
-    m_board = board;
     qDebug() << "Board received from factory for station:"
              << board->station()->name().value(QLocale::Language::Dutch)
              << "with" << board->entries().count() << "entries";
+    m_board = board;
     emit this->boardChanged();
     emit this->entriesChanged();
     emit this->stationChanged();
     emit this->fromChanged();
     emit this->untilChanged();
+
+    // Task finished
+    this->setBusy(false);
+}
+
+void Liveboard::handleProcessing(const QUrl &uri)
+{
+    // Page URI isn't needed for the user at the moment
+    Q_UNUSED(uri)
+
+    // Task started or running
+    this->setBusy(true);
 }
 
 // Getters & Setters
@@ -141,6 +171,9 @@ bool Liveboard::isBusy() const
 
 void Liveboard::setBusy(const bool &busy)
 {
-    m_busy = busy;
-    emit this->busyChanged();
+    // Only fire the signal when busy state really is changed
+    if(m_busy != busy) {
+        m_busy = busy;
+        emit this->busyChanged();
+    }
 }
