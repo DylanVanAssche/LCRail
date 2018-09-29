@@ -28,16 +28,16 @@ SOURCES += src/lcrail.cpp \
 
 # QRail library build location
 CONFIG(debug, debug|release) {
-    QRAIL_LOCATION = $$PWD/../QRail/build/debug
+    QRAIL_LOCATION = $$PWD/QRail/build/debug
 }
 else {
-    QRAIL_LOCATION = $$PWD/../QRail/build/release
+    QRAIL_LOCATION = $$PWD/QRail/build/release
 }
 LIBS += $$QRAIL_LOCATION/libqrail.a
 
 ## Headers include path of the QRail library
-INCLUDEPATH += $$PWD/../QRail/src/include \
-    $$PWD/../QRail/qtcsv/include
+INCLUDEPATH += $$PWD/QRail/src/include \
+    $$PWD/QRail/qtcsv/include
 
 DISTFILES += qml/lcrail.qml \
     qml/cover/CoverPage.qml \
