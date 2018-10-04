@@ -24,4 +24,15 @@ ApplicationWindow
     initialPage: Component { FirstPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
+
+    // Colors
+    readonly property string blue: "#3f51b5"
+    readonly property string red: "#f44336"
+    readonly property string green: "#43a047"
+    readonly property string orange: "#f9a825"
+    readonly property string yellow: "#ffeb3b"
+    readonly property string grey: "#37474f"
+    readonly property string black: "#263238"
+    readonly property string white: "#fffde7"
+    readonly property string transparent: "transparent"
 }

@@ -8,6 +8,7 @@
 
 #include "qrail.h"
 #include "models/liveboard.h"
+#include "models/stations.h"
 
 int main(int argc, char *argv[])
 {
@@ -21,9 +22,12 @@ int main(int argc, char *argv[])
     //   - SailfishApp::pathToMainQml() to get a QUrl to the main QML file
     //
     // To display the view, call "show()" (will show fullscreen on device).
-    qmlRegisterUncreatableType<QRail::LiveboardEngine::Board>("LCRail.Models.Liveboard.Board", 1, 0, "Board", "read only");
-    qmlRegisterUncreatableType<QRail::StationEngine::Station>("LCRail.Models.Station", 1, 0, "Station", "read only");
+    qmlRegisterUncreatableType<QRail::LiveboardEngine::Board>("LCRail.Models.Liveboard.Board", 1, 0,
+                                                              "Board", "read only");
+    qmlRegisterUncreatableType<QRail::StationEngine::Station>("LCRail.Models.Station", 1, 0, "Station",
+                                                              "read only");
     qmlRegisterType<Liveboard>("LCRail.Views.Liveboard", 1, 0, "Liveboard");
+    qmlRegisterType<Stations>("LCRail.Views.Stations", 1, 0, "StationsSearch");
 
     return SailfishApp::main(argc, argv);
 }

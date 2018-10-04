@@ -15,27 +15,27 @@
 *   along with LCRail.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import "../UC"
+function formatTime(timeInSeconds) {
+    var minutes = timeInSeconds/60; // Convert to minutes
+    var hours = Math.floor(minutes/60); // Convert to hours
+    minutes = minutes - hours*60 // Remove the converted hours
 
-TopMenu {
-    /*MenuItem {
-        text: "About"
-        onClicked: {
-            console.log("About clicked!")
-        }
-    }*/
-
-    /*MenuItem {
-        text: "Vehicle"
-        onClicked: {
-            console.log("Vehicle clicked!")
-        }
-    }*/
-
-    MenuItem {
-        text: "Liveboard"
-        onClicked: {
-            pageStack.push(Qt.resolvedUrl("../pages/LiveboardPage.qml"))
-        }
+    if(minutes < 10) { // Add leading zero if needed
+        minutes = "0" + Math.round(minutes);
     }
+
+    return hours + "H" + minutes;
+}
+
+function formatDelay(delayInSeconds) {
+    return "+" + formatTime(delayInSeconds);
+}
+
+function mergeTimeDelay(time, delayInSeconds) {
+    return new Date(time.getTime() + delayInSeconds*1000)
+}
+
+function filterId(id) {
+    var filterRegex = /^(S[0-9])|(ICE)|(THA)|(IC)|(EUR)|(TGV)|(P)|(L)/;
+    return filterRegex.exec(id)[0];
 }

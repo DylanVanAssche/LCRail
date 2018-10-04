@@ -24,7 +24,8 @@ QT += core \
 sql
 
 SOURCES += src/lcrail.cpp \
-    src/models/liveboard.cpp
+    src/models/liveboard.cpp \
+    src/models/stations.cpp
 
 # QRail library build location
 CONFIG(debug, debug|release) {
@@ -42,7 +43,6 @@ INCLUDEPATH += $$PWD/QRail/src/include \
 DISTFILES += qml/lcrail.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/lcrail.changes \
     rpm/lcrail.spec \
     rpm/lcrail.yaml \
@@ -115,7 +115,14 @@ DISTFILES += qml/lcrail.qml \
     qml/universal-components/ubuntu/UC/VerticalScrollDecorator.qml \
     qml/universal-components/tests/README.rst \
     qml/components/Menu.qml \
-    qml/components/ConnectionSelector.qml
+    qml/components/ConnectionSelector.qml \
+    qml/pages/LiveboardPage.qml \
+    qml/components/liveboard/LiveboardHeader.qml \
+    qml/components/liveboard/LiveboardDelegate.qml \
+    qml/js/utils.js \
+    qml/pages/StationSelectorPage.qml \
+    qml/components/station/StationSelectorHeader.qml \
+    qml/components/station/StationSelectorDelegate.qml
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
@@ -130,4 +137,5 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/lcrail-de.ts
 
 HEADERS += \
-    src/models/liveboard.h
+    src/models/liveboard.h \
+    src/models/stations.h

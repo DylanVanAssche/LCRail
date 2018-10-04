@@ -19,9 +19,16 @@
 
 #include <QtCore/QAbstractListModel>
 #include <QtCore/QDateTime>
+#include <QtCore/QList>
+#include <QtCore/QModelIndex>
+#include <QtCore/QUrl>
+#include <QtCore/QUrlQuery>
+#include <algorithm>
 
 #include "engines/liveboard/liveboardboard.h"
 #include "engines/liveboard/liveboardfactory.h"
+#include "engines/station/stationstation.h"
+#include "engines/vehicle/vehiclevehicle.h"
 
 class Liveboard : public QAbstractListModel
 {
@@ -48,43 +55,52 @@ public:
         hasLeftRole = Qt::UserRole + 12,
         stopTypeRole = Qt::UserRole + 13,
         occupancyLevelRole = Qt::UserRole + 14,
-        isExtraStopRole = Qt::UserRole + 15
+        isExtraStopRole = Qt::UserRole + 15,
+        hasDelay = Qt::UserRole + 16
     };
     explicit Liveboard(QObject *parent = nullptr);
-    virtual int rowCount(const QModelIndex&) const;
+    virtual int rowCount(const QModelIndex &) const;
     virtual QVariant data(const QModelIndex &index, int role) const;
     QRail::StationEngine::Station *station();
     QDateTime from() const;
     QDateTime until() const;
     bool isBusy() const;
     Q_INVOKABLE void getBoard(QRail::StationEngine::Station *station,
-                  const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
+                              const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
     Q_INVOKABLE void getBoard(const QUrl &uri,
-                  const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
+                              const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
+
+    Q_INVOKABLE void clearBoard();
 
 protected:
     QHash<int, QByteArray> roleNames() const;
 
 signals:
     void busyChanged();
-    void boardChanged();
     void entriesChanged();
     void stationChanged();
     void fromChanged();
     void untilChanged();
-    void progressUpdated(const QUrl &uri, const qint16 &progress);
+    void processing(const QString &uri, const QDateTime &timestamp);
     void error(const QString &message);
 
 private slots:
-    void handleBoard(QRail::LiveboardEngine::Board *board);
+    void handleStream(QRail::VehicleEngine::Vehicle *entry);
     void handleProcessing(const QUrl &uri);
+    void handleFinished(QRail::LiveboardEngine::Board *board);
 
 private:
     bool m_busy;
-    qint16 m_previousProgress;
-    QRail::LiveboardEngine::Board *m_board;
+    QList<QRail::VehicleEngine::Vehicle *> m_entries;
+    QDateTime m_from;
+    QDateTime m_until;
+    QRail::StationEngine::Station *m_station;
+    bool m_hasDelay;
     QRail::LiveboardEngine::Factory *m_factory;
     void setBusy(const bool &busy);
+    void setFrom(const QDateTime &from);
+    void setUntil(const QDateTime &until);
+    void setStation(QRail::StationEngine::Station *station);
 };
 
 #endif // LIVEBOARD_H
