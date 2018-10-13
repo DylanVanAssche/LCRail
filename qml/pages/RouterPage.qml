@@ -65,6 +65,7 @@ Page {
                     width: ListView.view.width
                     trip: model.trip
                 }
+                spacing: Theme.paddingLarge
                 model: Router {
                     id: router
                     onBusyChanged: {

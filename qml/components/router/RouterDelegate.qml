@@ -23,12 +23,12 @@ import "../../js/utils.js" as Utils
 ListItem {
     property var trip
 
-    contentHeight: connectionList.height + 2*Theme.paddingMedium
+    contentHeight: connectionList.height
     enabled: false
 
     SilicaListView {
         id: connectionList
-        anchors{
+        anchors {
             verticalCenter: parent.verticalCenter
         }
         width: parent.width
