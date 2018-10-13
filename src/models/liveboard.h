@@ -71,9 +71,11 @@ public:
                               const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
 
     Q_INVOKABLE void clearBoard();
+    Q_INVOKABLE void loadNext(); // fetchMore is only usuable for synced operations
+    Q_INVOKABLE void loadPrevious();
 
 protected:
-    QHash<int, QByteArray> roleNames() const;
+    QHash<int, QByteArray> roleNames() const override;
 
 signals:
     void busyChanged();
@@ -83,6 +85,7 @@ signals:
     void untilChanged();
     void processing(const QString &uri, const QDateTime &timestamp);
     void error(const QString &message);
+    void finished();
 
 private slots:
     void handleStream(QRail::VehicleEngine::Vehicle *entry);
@@ -91,6 +94,7 @@ private slots:
 
 private:
     bool m_busy;
+    QRail::LiveboardEngine::Board *m_liveboard;
     QList<QRail::VehicleEngine::Vehicle *> m_entries;
     QDateTime m_from;
     QDateTime m_until;

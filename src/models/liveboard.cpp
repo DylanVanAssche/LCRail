@@ -46,6 +46,7 @@ Liveboard::Liveboard(QObject *parent): QAbstractListModel(parent)
     m_from = QDateTime();
     m_until = QDateTime();
     m_station = nullptr;
+    m_liveboard = nullptr;
 }
 
 // Invokers
@@ -67,6 +68,7 @@ void Liveboard::clearBoard()
 {
     this->beginResetModel();
     m_entries.clear();
+    m_liveboard = nullptr;
     this->endResetModel();
 }
 
@@ -91,6 +93,24 @@ QHash<int, QByteArray> Liveboard::roleNames() const
     roles[isExtraStopRole] = "isExtraStop";
     roles[hasDelay] = "hasDelay";
     return roles;
+}
+
+void Liveboard::loadNext()
+{
+    if (m_liveboard && !this->isBusy()) {
+        qDebug() << "Extending liveboard NEXT";
+        this->setBusy(true);
+        m_factory->getNextResultsForLiveboard(this->m_liveboard);
+    }
+}
+
+void Liveboard::loadPrevious()
+{
+    if (m_liveboard && !this->isBusy()) {
+        qDebug() << "Extending liveboard PREVIOUS";
+        this->setBusy(true);
+        m_factory->getPreviousResultsForLiveboard(this->m_liveboard);
+    }
 }
 
 int Liveboard::rowCount(const QModelIndex &) const
@@ -155,7 +175,9 @@ QVariant Liveboard::data(const QModelIndex &index, int role) const
 // Processors
 void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
 {
-    qDebug() << "Inserting item into m_entries";
+    qDebug() << "Inserting:" << entry->uri() << "to:" << entry->headsign() << "time=" <<
+             entry->intermediaryStops().first()->departureTime()
+             << "+" << entry->intermediaryStops().first()->departureDelay();
     bool foundInsertIndex = false;
 
     QDateTime newEntryDepartureTime = entry->intermediaryStops().first()->departureTime();
@@ -174,25 +196,9 @@ void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
 
     // Entry should be added in front or at the end of the list
     if (!foundInsertIndex) {
-        // List is empty, no checks have to be applied
-        if (m_entries.isEmpty()) {
-            this->beginInsertRows(QModelIndex(), m_entries.length(), m_entries.length());
-            m_entries.append(entry);
-            this->endInsertRows();
-        }
-        // If the last entry is before our entry (departure time) we append it to the list
-        else if (m_entries.last()->intermediaryStops().first()->departureTime() <
-                 entry->intermediaryStops().first()->departureTime()) {
-            this->beginInsertRows(QModelIndex(), m_entries.length(), m_entries.length());
-            m_entries.append(entry);
-            this->endInsertRows();
-        }
-        // Our entry must be added in front of the list since no entryIndex was found and it's not later than our latest item
-        else {
-            this->beginInsertRows(QModelIndex(), 0, 0);
-            m_entries.prepend(entry);
-            this->endInsertRows();
-        }
+        this->beginInsertRows(QModelIndex(), m_entries.length(), m_entries.length());
+        m_entries.append(entry);
+        this->endInsertRows();
     }
 
 }
@@ -207,9 +213,10 @@ void Liveboard::handleProcessing(const QUrl &uri)
 
 void Liveboard::handleFinished(QRail::LiveboardEngine::Board *board)
 {
-    this->setUntil(board->until());
-    this->setFrom(board->from());
-    this->setStation(board->station());
+    m_liveboard = board;
+    emit this->stationChanged();
+    emit this->fromChanged();
+    emit this->untilChanged();
 
     // Task finished
     this->setBusy(false);
@@ -218,37 +225,37 @@ void Liveboard::handleFinished(QRail::LiveboardEngine::Board *board)
 // Getters & Setters
 QRail::StationEngine::Station *Liveboard::station()
 {
-    return m_station;
+    return m_liveboard->station();
 }
 
 void Liveboard::setStation(QRail::StationEngine::Station *station)
 {
-    m_station = station;
+    m_liveboard->setStation(station);
     emit this->stationChanged();
 }
 
 QDateTime Liveboard::from() const
 {
-    return m_from;
+    return m_liveboard->from();
 }
 
 void Liveboard::setFrom(const QDateTime &from)
 {
-    if (m_from != from) {
-        m_from = from;
+    if (m_liveboard->from() != from) {
+        m_liveboard->setFrom(from);
         emit this->fromChanged();
     }
 }
 
 QDateTime Liveboard::until() const
 {
-    return m_until;
+    return m_liveboard->until();
 }
 
 void Liveboard::setUntil(const QDateTime &until)
 {
-    if (m_until != until) {
-        m_until = until;
+    if (m_liveboard->until() != until) {
+        m_liveboard->setUntil(until);
         emit this->untilChanged();
     }
 }

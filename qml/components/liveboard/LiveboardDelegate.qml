@@ -31,6 +31,7 @@ ListItem {
     property bool isPlatformNormal
     property string headsign
     property string vehicleID
+    property bool isCanceled
 
     Label {
         id: time
@@ -114,5 +115,31 @@ ListItem {
         z: -1 // Make ListItem highlight visible
         color: index%2? black: grey
         anchors { fill: parent }
+    }
+
+    Item {
+        visible: isCanceled
+        width: parent.width
+        height: parent.height
+
+        Rectangle {
+            anchors { fill: parent }
+            opacity: 0.75
+            gradient: Gradient {
+                GradientStop { position: 0.0; color: Theme.highlightBackgroundColor }
+                GradientStop { position: 0.33; color: Theme.highlightDimmerColor }
+                GradientStop { position: 0.66; color: Theme.highlightDimmerColor }
+                GradientStop { position: 1.0; color: Theme.highlightBackgroundColor }
+            }
+        }
+
+        Label {
+            anchors { centerIn: parent }
+            text: "Canceled"
+            color: Theme.primaryColor
+            font.bold: true
+            font.capitalization: Font.AllUppercase
+            font.pixelSize: Theme.fontSizeLarge
+        }
     }
 }

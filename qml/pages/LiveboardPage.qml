@@ -40,6 +40,21 @@ Page {
         }
     }
 
+    function fetchMore() {
+        // Fetch more or less
+        if(entriesList.count > 0 && !liveboard.busy) {
+            var delegateHeight = entriesList.contentItem.children[0].height; // All children have the same height
+            if(entriesList.contentY < delegateHeight * entriesList.count/3) {
+                console.log("Fetching previous");
+                liveboard.loadPrevious();
+            }
+            else if(entriesList.contentY >= delegateHeight * (Math.max(1, 2*entriesList.count/3))) {
+                console.log("Fetching next");
+                liveboard.loadNext();
+            }
+        }
+    }
+
     LiveboardHeader {
         id: header
         anchors {
@@ -59,6 +74,9 @@ Page {
 
     PlatformListView {
         id: entriesList
+
+        property real _previousContentY
+
         anchors {
             top: header.bottom
             left: parent.left
@@ -75,10 +93,13 @@ Page {
             isPlatformNormal: model.isPlatformNormal
             headsign: model.headsign
             vehicleID: model.URI.split("/")[4] // Only ID
+            isCanceled: model.isArrivalCanceled || model.isDepartureCanceled
         }
         ListView.onAdd: FadeAnimation {}
         ListView.onRemove: FadeAnimation {}
-
+        onContentYChanged: fetchMore()
+        // https://doc.qt.io/qt-5/qml-qtquick-flickable.html#verticalOvershoot-prop
+        // should be added if we want to fetch when reaching boudaries instead of contentY, Qt 5.9 SFOS 3.0
         model: Liveboard {
             id: liveboard
             onBusyChanged: {
@@ -86,6 +107,9 @@ Page {
                     _after = new Date();
                     header.benchmark = _after.getTime() - _before.getTime() + " ms";
                     header.title = _stationName;
+                }
+                else {
+                    _before = new Date();
                 }
             }
             onProcessing: header.benchmark = timestamp.toLocaleString(Qt.locale(), "HH:mm dd/MM/yyyy")
