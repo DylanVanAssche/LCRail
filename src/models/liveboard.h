@@ -23,6 +23,9 @@
 #include <QtCore/QModelIndex>
 #include <QtCore/QUrl>
 #include <QtCore/QUrlQuery>
+#include <QtCore/QHash>
+#include <QtCore/QByteArray>
+#include <QtCore/QVariant>
 #include <algorithm>
 
 #include "engines/liveboard/liveboardboard.h"
@@ -96,9 +99,6 @@ private:
     bool m_busy;
     QRail::LiveboardEngine::Board *m_liveboard;
     QList<QRail::VehicleEngine::Vehicle *> m_entries;
-    QDateTime m_from;
-    QDateTime m_until;
-    QRail::StationEngine::Station *m_station;
     bool m_hasDelay;
     QRail::LiveboardEngine::Factory *m_factory;
     void setBusy(const bool &busy);

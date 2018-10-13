@@ -35,19 +35,12 @@ Page {
                 menu: Menu {}
             }
 
-            Label {
-                text: "Select benchmark"
-            }
-
-            Button {
-                onClicked: {
-                    var _page = pageStack.push(Qt.resolvedUrl("StationSelectorPage.qml"));
-                    _page.selected.connect(function(uri, name) {
-                        console.log(uri)
-                        console.log(name)
-                        //getData()
-                    });
-                }
+            ConnectionSelector {
+                onSelected: pageStack.push(Qt.resolvedUrl("../pages/RouterPage.qml"),
+                                           {
+                                               from: fromURI,
+                                               to: toURI
+                                           })
             }
         }
     }

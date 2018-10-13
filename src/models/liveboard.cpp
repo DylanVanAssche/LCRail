@@ -43,10 +43,8 @@ Liveboard::Liveboard(QObject *parent): QAbstractListModel(parent)
 
     // Init variables
     m_entries = QList<QRail::VehicleEngine::Vehicle *>();
-    m_from = QDateTime();
-    m_until = QDateTime();
-    m_station = nullptr;
     m_liveboard = nullptr;
+    m_busy = false;
 }
 
 // Invokers
@@ -200,7 +198,6 @@ void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
         m_entries.append(entry);
         this->endInsertRows();
     }
-
 }
 
 void Liveboard::handleProcessing(const QUrl &uri)

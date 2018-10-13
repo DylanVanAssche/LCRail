@@ -36,6 +36,6 @@ function mergeTimeDelay(time, delayInSeconds) {
 }
 
 function filterId(id) {
-    var filterRegex = /^(S[0-9])|(ICE)|(THA)|(IC)|(EUR)|(TGV)|(P)|(L)/;
+    var filterRegex = /^(S[0-9]{4})|(ICE[0-9]{4})|(THA[0-9]{4})|(IC[0-9]{3,4})|(EUR[0-9]{4})|(TGV[0-9]{4})|(P[0-9]{3,4})|(L[0-9]{3,4})/;
     return filterRegex.exec(id)[0];
 }

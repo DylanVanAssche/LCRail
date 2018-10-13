@@ -25,7 +25,9 @@ sql
 
 SOURCES += src/lcrail.cpp \
     src/models/liveboard.cpp \
-    src/models/stations.cpp
+    src/models/stations.cpp \
+    src/models/router.cpp \
+    src/models/trip.cpp
 
 # QRail library build location
 CONFIG(debug, debug|release) {
@@ -122,7 +124,11 @@ DISTFILES += qml/lcrail.qml \
     qml/js/utils.js \
     qml/pages/StationSelectorPage.qml \
     qml/components/station/StationSelectorHeader.qml \
-    qml/components/station/StationSelectorDelegate.qml
+    qml/components/station/StationSelectorDelegate.qml \
+    qml/pages/RouterPage.qml \
+    qml/components/router/RouterDelegate.qml \
+    qml/components/router/RouterStationIndicator.qml \
+    qml/components/router/RouterTransferIndicator.qml
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
@@ -138,4 +144,6 @@ TRANSLATIONS += translations/lcrail-de.ts
 
 HEADERS += \
     src/models/liveboard.h \
-    src/models/stations.h
+    src/models/stations.h \
+    src/models/router.h \
+    src/models/trip.h

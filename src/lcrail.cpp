@@ -9,6 +9,7 @@
 #include "qrail.h"
 #include "models/liveboard.h"
 #include "models/stations.h"
+#include "models/router.h"
 
 int main(int argc, char *argv[])
 {
@@ -26,7 +27,10 @@ int main(int argc, char *argv[])
                                                               "Board", "read only");
     qmlRegisterUncreatableType<QRail::StationEngine::Station>("LCRail.Models.Station", 1, 0, "Station",
                                                               "read only");
+    qmlRegisterUncreatableType<QRail::RouterEngine::Route>("LCRail.Models.Route", 1, 0, "Route",
+                                                           "read only");
     qmlRegisterType<Liveboard>("LCRail.Views.Liveboard", 1, 0, "Liveboard");
+    qmlRegisterType<Router>("LCRail.Views.Router", 1, 0, "Router");
     qmlRegisterType<Stations>("LCRail.Views.Stations", 1, 0, "StationsSearch");
 
     return SailfishApp::main(argc, argv);
