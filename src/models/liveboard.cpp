@@ -111,6 +111,12 @@ void Liveboard::loadPrevious()
     }
 }
 
+void Liveboard::abortCurrentOperation()
+{
+    qDebug() << "Abort Liveboard";
+    m_factory->abortCurrentOperation();
+}
+
 int Liveboard::rowCount(const QModelIndex &) const
 {
     return m_entries.count();

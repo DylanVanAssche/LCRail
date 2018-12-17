@@ -93,6 +93,12 @@ void Router::clearRoutes()
     this->endResetModel();
 }
 
+void Router::abortCurrentOperation()
+{
+    qDebug() << "Abort Planner";
+    m_planner->abortCurrentOperation();
+}
+
 void Router::handleStream(QRail::RouterEngine::Route *route)
 {
     qDebug() << "Inserting:" << route->departureTime() << "|" << route->arrivalTime();

@@ -76,6 +76,7 @@ public:
     Q_INVOKABLE void clearBoard();
     Q_INVOKABLE void loadNext(); // fetchMore is only usuable for synced operations
     Q_INVOKABLE void loadPrevious();
+    Q_INVOKABLE void abortCurrentOperation();
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

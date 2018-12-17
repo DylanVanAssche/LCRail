@@ -5,6 +5,7 @@
 #include <sailfishapp.h>
 #include <QQmlEngine>
 #include <QUrl>
+#include <QtQml>
 
 #include "qrail.h"
 #include "models/liveboard.h"

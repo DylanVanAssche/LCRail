@@ -35,6 +35,9 @@ Page {
         _before = new Date();
         if(_stationURI.indexOf("http://irail.be/stations/NMBS/") !== -1) { // QRail should validate the URI itself TO DO
             header.title = "Loading ...";
+            if(liveboard.busy) {
+                liveboard.abortCurrentOperation();
+            }
             liveboard.clearBoard();
             liveboard.getBoard(_stationURI);
         }

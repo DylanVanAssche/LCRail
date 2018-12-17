@@ -50,6 +50,7 @@ public:
                                     const QDateTime &departureTime,
                                     const quint16 &maxTransfers);
     Q_INVOKABLE void clearRoutes();
+    Q_INVOKABLE void abortCurrentOperation();
     bool isBusy() const;
 
 signals:

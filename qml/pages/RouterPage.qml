@@ -34,9 +34,12 @@ Page {
     onStatusChanged: status === PageStatus.Active? getData(): undefined
 
     function getData() {
-        console.log("Fetching connections VILVOORDE -> BRUGGE")
+        console.log("Fetching connections")
         _before = new Date();
         if(from.length > 0 && to.length > 0) {
+            if(router.busy) {
+                router.abortCurrentOperation()
+            }
             router.getConnections(from, to, departureTime, maxTransfers);
         }
         else {
