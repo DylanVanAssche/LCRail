@@ -35,7 +35,7 @@ Page {
         if(status === PageStatus.Active) {
             getData()
         }
-        else if(status === PageStatus.Deactivating) {
+        else if(status === PageStatus.Deactivating && router.busy) {
             router.abortCurrentOperation()
             console.warn("Routing operation aborted")
         }
