@@ -59,7 +59,7 @@ signals:
 
 private slots:
     void handleStream(QRail::RouterEngine::Route *route);
-    void handleFinished(QList<QRail::RouterEngine::Route *> routes);
+    void handleFinished(QRail::RouterEngine::Journey *journey);
     void handleProcessing(const QUrl &uri);
 
 protected:

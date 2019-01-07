@@ -24,12 +24,12 @@ Router::Router(QObject *parent) : QAbstractListModel(parent)
     qRegisterMetaType<QList<QRail::RouterEngine::Route *>>("QList<QRail::RouterEngine::Route *>");
     qRegisterMetaType<QRail::VehicleEngine::Vehicle *>("QRail::VehicleEngine::Vehicle *");
 
-    // Retrieve the QRail::RouterEngine::Planner instance and connect it's signals
+    // Retrieve the QRail::RouterEngine::Planner instance and connect its signals
     m_planner = QRail::RouterEngine::Planner::getInstance();
     connect(m_planner,
-            SIGNAL(finished(QList<QRail::RouterEngine::Route *>)),
+            SIGNAL(finished(QRail::RouterEngine::Journey *)),
             this,
-            SLOT(handleFinished(QList<QRail::RouterEngine::Route *>)));
+            SLOT(handleFinished(QRail::RouterEngine::Journey *)));
     connect(m_planner,
             SIGNAL(stream(QRail::RouterEngine::Route *)),
             this,
@@ -126,9 +126,9 @@ void Router::handleStream(QRail::RouterEngine::Route *route)
     }
 }
 
-void Router::handleFinished(QList<QRail::RouterEngine::Route *> routes)
+void Router::handleFinished(QRail::RouterEngine::Journey *journey)
 {
-    Q_UNUSED(routes);
+    Q_UNUSED(journey->routes());
     qDebug() << "Finished routing";
     this->setBusy(false);
 }
