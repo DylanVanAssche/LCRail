@@ -31,15 +31,20 @@ Page {
     property date _after
 
     // For performance reasons we wait until the Page is fully loaded before doing an API request
-    onStatusChanged: status === PageStatus.Active? getData(): undefined
+    onStatusChanged: {
+        if(status === PageStatus.Active) {
+            getData()
+        }
+        else if(status === PageStatus.Deactivating) {
+            router.abortCurrentOperation()
+            console.warn("Routing operation aborted")
+        }
+    }
 
     function getData() {
         console.log("Fetching connections")
         _before = new Date();
         if(from.length > 0 && to.length > 0) {
-            if(router.busy) {
-                router.abortCurrentOperation()
-            }
             router.getConnections(from, to, departureTime, maxTransfers);
         }
         else {

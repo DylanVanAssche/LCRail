@@ -29,32 +29,23 @@ Page {
     property string _stationName
 
     // For performance reasons we wait until the Page is fully loaded before doing an API request
-    onStatusChanged: status === PageStatus.Active? getData(): undefined
+    onStatusChanged: {
+            if(status === PageStatus.Active) {
+                getData();
+            }
+            else if(status === PageStatus.Deactivating) {
+                liveboard.abortCurrentOperation();
+                console.warn("Liveboard operation ABORTED")
+            }
+    }
 
     function getData() {
         _before = new Date();
         if(_stationURI.indexOf("http://irail.be/stations/NMBS/") !== -1) { // QRail should validate the URI itself TO DO
             header.title = "Loading ...";
-            if(liveboard.busy) {
-                liveboard.abortCurrentOperation();
-            }
+            liveboard.abortCurrentOperation();
             liveboard.clearBoard();
             liveboard.getBoard(_stationURI);
-        }
-    }
-
-    function fetchMore() {
-        // Fetch more or less
-        if(entriesList.count > 0 && !liveboard.busy) {
-            var delegateHeight = entriesList.contentItem.children[0].height; // All children have the same height
-            if(entriesList.contentY < delegateHeight * entriesList.count/3) {
-                console.log("Fetching previous");
-                liveboard.loadPrevious();
-            }
-            else if(entriesList.contentY >= delegateHeight * (Math.max(1, 2*entriesList.count/3))) {
-                console.log("Fetching next");
-                liveboard.loadNext();
-            }
         }
     }
 
@@ -100,7 +91,7 @@ Page {
         }
         ListView.onAdd: FadeAnimation {}
         ListView.onRemove: FadeAnimation {}
-        onContentYChanged: fetchMore()
+        // onContentYChanged:
         // https://doc.qt.io/qt-5/qml-qtquick-flickable.html#verticalOvershoot-prop
         // should be added if we want to fetch when reaching boudaries instead of contentY, Qt 5.9 SFOS 3.0
         model: Liveboard {
@@ -116,6 +107,20 @@ Page {
                 }
             }
             onProcessing: header.benchmark = timestamp.toLocaleString(Qt.locale(), "HH:mm dd/MM/yyyy")
+        }
+
+        PullDownMenu {
+            MenuItem {
+                text: "Previous";
+                onClicked: liveboard.loadPrevious();
+            }
+        }
+
+        PushUpMenu {
+            MenuItem {
+                text: "Next";
+                onClicked: liveboard.loadNext();
+            }
         }
 
         VerticalScrollDecorator {}

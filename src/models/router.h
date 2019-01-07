@@ -69,6 +69,7 @@ private:
     QRail::RouterEngine::Planner *m_planner;
     QList<QRail::RouterEngine::Route *> m_routes;
     bool m_busy;
+    bool m_isCancelled;
     void setBusy(const bool &busy);
 };
 
