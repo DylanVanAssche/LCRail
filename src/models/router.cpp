@@ -80,7 +80,7 @@ void Router::getConnections(const QString &departureStation,
         this->clearRoutes();
         m_planner->getConnections(QUrl(departureStation),
                                   QUrl(arrivalStation),
-                                  departureTime,
+                                  departureTime.toUTC(),
                                   maxTransfers);
     }
 }

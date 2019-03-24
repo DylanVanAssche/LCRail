@@ -59,7 +59,7 @@ void Liveboard::getBoard(QRail::StationEngine::Station *station,
 void Liveboard::getBoard(const QUrl &uri, const QRail::LiveboardEngine::Board::Mode &mode)
 {
     this->setBusy(true);
-    m_factory->getLiveboardByStationURI(uri, QDateTime::currentDateTime(), QDateTime::currentDateTime().addSecs(3 * 3600), mode);
+    m_factory->getLiveboardByStationURI(uri, QDateTime::currentDateTimeUtc(), QDateTime::currentDateTimeUtc().addSecs(3 * 3600), mode);
 }
 
 void Liveboard::clearBoard()
