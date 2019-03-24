@@ -186,6 +186,7 @@ void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
     qDebug() << "Inserting:" << entry->uri() << "to:" << entry->headsign() << "time=" <<
              entry->intermediaryStops().first()->departureTime()
              << "+" << entry->intermediaryStops().first()->departureDelay();
+    this->setBusy(true);
 
     QDateTime newEntryDepartureTime = entry->intermediaryStops().first()->departureTime();
     for (qint16 i = 0; i < m_entries.length(); i++) {

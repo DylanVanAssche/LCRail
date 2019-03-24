@@ -80,6 +80,9 @@ Page {
                             _after = new Date();
                             header.description = _after.getTime() - _before.getTime() + " ms";
                         }
+                        else {
+                            _before = new Date();
+                        }
                     }
                     onProcessing: header.description = timestamp.toLocaleString(Qt.locale(), "HH:mm dd/MM/yyyy")
                 }
