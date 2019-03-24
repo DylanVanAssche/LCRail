@@ -32,6 +32,7 @@
 #include "engines/liveboard/liveboardfactory.h"
 #include "engines/station/stationstation.h"
 #include "engines/vehicle/vehiclevehicle.h"
+#include "../sailfishos.h"
 
 class Liveboard : public QAbstractListModel
 {

@@ -21,13 +21,18 @@ QT += core \
     network \
     positioning \
     concurrent \
-sql
+    sql
+
+# OS module notification support
+PKGCONFIG += nemonotifications-qt5
+QT += dbus
 
 SOURCES += src/lcrail.cpp \
     src/models/liveboard.cpp \
     src/models/stations.cpp \
     src/models/router.cpp \
-    src/models/trip.cpp
+    src/models/trip.cpp \
+    src/sailfishos.cpp
 
 # Enable GCOV coverage reports (https://medium.com/@kelvin_sp/generating-code-coverage-with-qt-5-and-gcov-on-mac-os-4999857f4676)
 # --coverage option is synonym for: -fprofile-arcs -ftest-coverage -lgcov
@@ -151,4 +156,5 @@ HEADERS += \
     src/models/liveboard.h \
     src/models/stations.h \
     src/models/router.h \
-    src/models/trip.h
+    src/models/trip.h \
+    src/sailfishos.h

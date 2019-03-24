@@ -130,7 +130,8 @@ void Router::handleStream(QRail::RouterEngine::Route *route)
 
 void Router::handleFinished(QRail::RouterEngine::Journey *journey)
 {
-    Q_UNUSED(journey->routes());
+    m_planner->unwatchAll();
+    m_planner->watch(journey);
     qDebug() << "Finished routing";
     this->setBusy(false);
 }
