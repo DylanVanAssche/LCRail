@@ -27,8 +27,7 @@ Page {
     signal selected(string uri, string name)
 
     id: searchPage
-    // For performance reasons we wait until the Page is fully loaded before doing an API request
-    //onStatusChanged: status === PageStatus.Active? getData(): undefined
+    // For performance reasons we wait until a search request has been performed before doing an API request
     on_SearchStringChanged: getData()
 
     function getData() {

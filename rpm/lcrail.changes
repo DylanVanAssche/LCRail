@@ -12,6 +12,12 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Thu Jan 8 2019 Dylan Van Assche <dylan.van.assche@protonmail.com> 0.0.2-1
+- [MINOR BUGFIX] UI fixes
+- [IMPROVEMENT] Better abort operations
+- [IMPROVEMENT] Better next and previous result in Liveboard
+- [UPSTREAM] Adapt to upstream changes
+
 * Sat Oct 13 2018 Dylan Van Assche <dylan.van.assche@protonmail.com> 0.0.1-1
 - Initial version
 

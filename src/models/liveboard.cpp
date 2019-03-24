@@ -45,6 +45,7 @@ Liveboard::Liveboard(QObject *parent): QAbstractListModel(parent)
     m_entries = QList<QRail::VehicleEngine::Vehicle *>();
     m_liveboard = nullptr;
     m_busy = false;
+    m_valid = false;
 }
 
 // Invokers
@@ -66,6 +67,7 @@ void Liveboard::clearBoard()
     this->beginResetModel();
     m_entries.clear();
     m_liveboard = nullptr;
+    this->setValid(false);
     this->endResetModel();
 }
 
@@ -112,8 +114,11 @@ void Liveboard::loadPrevious()
 
 void Liveboard::abortCurrentOperation()
 {
-    qDebug() << "Abort Liveboard";
-    m_factory->abortCurrentOperation();
+    if(this->isBusy()) {
+        qDebug() << "Abort Liveboard";
+        m_factory->abortCurrentOperation();
+        this->setValid(false);
+    }
 }
 
 int Liveboard::rowCount(const QModelIndex &) const
@@ -220,6 +225,9 @@ void Liveboard::handleFinished(QRail::LiveboardEngine::Board *board)
     emit this->fromChanged();
     emit this->untilChanged();
 
+    // A complete liveboard is ready
+    this->setValid(true);
+
     // Task finished
     this->setBusy(false);
 }
@@ -267,11 +275,25 @@ bool Liveboard::isBusy() const
     return m_busy;
 }
 
+bool Liveboard::isValid() const
+{
+    return m_valid;
+}
+
 void Liveboard::setBusy(const bool &busy)
 {
     // Only fire the signal when busy state really is changed
     if (m_busy != busy) {
         m_busy = busy;
         emit this->busyChanged();
+    }
+}
+
+void Liveboard::setValid(const bool &valid)
+{
+    // Only fire the signal when valid state really is changed
+    if (m_valid != valid) {
+        m_valid = valid;
+        emit this->validChanged();
     }
 }

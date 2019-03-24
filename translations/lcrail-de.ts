@@ -3,16 +3,13 @@
 <TS version="2.1">
 <context>
     <name></name>
-    <message id="berail-stations">
+    <message id="lcrail-stations">
         <source>Stations</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>CoverPage</name>
-    <message>
-        <source>My Cover</source>
-        <translation>Mein Cover</translation>
+    <message id="lcrail-cover">
+        <source>LCRail</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

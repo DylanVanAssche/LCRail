@@ -95,8 +95,10 @@ void Router::clearRoutes()
 
 void Router::abortCurrentOperation()
 {
-    qDebug() << "Abort Planner";
-    m_planner->abortCurrentOperation();
+    if(this->isBusy()) {
+        qDebug() << "Abort Planner";
+        m_planner->abortCurrentOperation();
+    }
 }
 
 void Router::handleStream(QRail::RouterEngine::Route *route)

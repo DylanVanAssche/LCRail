@@ -35,7 +35,6 @@ Page {
             }
             else if(status === PageStatus.Deactivating) {
                 liveboard.abortCurrentOperation();
-                console.warn("Liveboard operation ABORTED")
             }
     }
 
@@ -110,6 +109,8 @@ Page {
         }
 
         PullDownMenu {
+            visible: liveboard.valid
+
             MenuItem {
                 text: "Previous";
                 onClicked: liveboard.loadPrevious();
@@ -117,6 +118,8 @@ Page {
         }
 
         PushUpMenu {
+            visible: liveboard.valid
+
             MenuItem {
                 text: "Next";
                 onClicked: liveboard.loadNext();

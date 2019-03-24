@@ -29,9 +29,9 @@ Column {
     id: header
     width: parent.width
 
-    //% "Stations"
     PageHeader {
-        title: qsTrId("berail-stations")
+        //% "Stations"
+        title: qsTrId("lcrail-stations")
 
         BusyIndicator {
             anchors {

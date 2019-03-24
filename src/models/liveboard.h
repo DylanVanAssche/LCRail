@@ -37,6 +37,7 @@ class Liveboard : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(bool busy READ isBusy NOTIFY busyChanged)
+    Q_PROPERTY(bool valid READ isValid NOTIFY validChanged)
     Q_PROPERTY(QRail::StationEngine::Station *station READ station NOTIFY stationChanged)
     Q_PROPERTY(QDateTime from READ from NOTIFY fromChanged)
     Q_PROPERTY(QDateTime until READ until NOTIFY untilChanged)
@@ -68,6 +69,7 @@ public:
     QDateTime from() const;
     QDateTime until() const;
     bool isBusy() const;
+    bool isValid() const;
     Q_INVOKABLE void getBoard(QRail::StationEngine::Station *station,
                               const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
     Q_INVOKABLE void getBoard(const QUrl &uri,
@@ -83,6 +85,7 @@ protected:
 
 signals:
     void busyChanged();
+    void validChanged();
     void entriesChanged();
     void stationChanged();
     void fromChanged();
@@ -98,11 +101,13 @@ private slots:
 
 private:
     bool m_busy;
+    bool m_valid;
     QRail::LiveboardEngine::Board *m_liveboard;
     QList<QRail::VehicleEngine::Vehicle *> m_entries;
     bool m_hasDelay;
     QRail::LiveboardEngine::Factory *m_factory;
     void setBusy(const bool &busy);
+    void setValid(const bool &valid);
     void setFrom(const QDateTime &from);
     void setUntil(const QDateTime &until);
     void setStation(QRail::StationEngine::Station *station);
