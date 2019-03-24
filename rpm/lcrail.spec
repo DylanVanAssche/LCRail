@@ -8,13 +8,14 @@ Name:       lcrail
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    LCRail
-Version:    0.0.2
+Version:    0.0.3
 Release:    1
 Group:      Qt/Qt
 License:    GPLv3
 URL:        https://dylanvanassche.be/
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
+Requires:   nemo-qml-plugin-notifications-qt5
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
@@ -23,7 +24,6 @@ BuildRequires:  desktop-file-utils
 
 %description
 LCRail is a demo application to show the power of Linked Connections.
-
 
 %prep
 %setup -q -n %{name}-%{version}

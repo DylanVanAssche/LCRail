@@ -186,28 +186,44 @@ void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
     qDebug() << "Inserting:" << entry->uri() << "to:" << entry->headsign() << "time=" <<
              entry->intermediaryStops().first()->departureTime()
              << "+" << entry->intermediaryStops().first()->departureDelay();
-    bool foundInsertIndex = false;
 
     QDateTime newEntryDepartureTime = entry->intermediaryStops().first()->departureTime();
     for (qint16 i = 0; i < m_entries.length(); i++) {
         QDateTime entryDepartureTime = m_entries.at(i)->intermediaryStops().first()->departureTime();
+
+        // Update existing entries (updates)
+        if(m_entries.at(i)->uri() == entry->uri()) {
+            // Remove old entry
+            this->beginRemoveRows(QModelIndex(), i, i);
+            m_entries.removeAt(i);
+            this->endRemoveRows();
+
+            // Insert new entry
+            this->beginInsertRows(QModelIndex(), i, i);
+            m_entries.insert(i, entry);
+            this->endInsertRows();
+
+            // Notify user
+            SailfishOS::createNotification("Liveboard updated!",
+                                           "Vehicle to " + entry->headsign() + " (" + entry->intermediaryStops().first()->departureTime().toString("hh:mm") + ") has been updated.",
+                                           "social",
+                                           "lcrail-liveboard-update");
+            return;
+        }
 
         // TO DO: Smarter inserting: Departure and arrival time are now the same, so this works for now
         if (entryDepartureTime > newEntryDepartureTime) {
             this->beginInsertRows(QModelIndex(), i, i);
             m_entries.insert(i, entry);
             this->endInsertRows();
-            foundInsertIndex = true;
-            break;
+            return;
         }
     }
 
-    // Entry should be added in front or at the end of the list
-    if (!foundInsertIndex) {
-        this->beginInsertRows(QModelIndex(), m_entries.length(), m_entries.length());
-        m_entries.append(entry);
-        this->endInsertRows();
-    }
+    // Entry should be added in front or at the end of the list (if not found above)
+    this->beginInsertRows(QModelIndex(), m_entries.length(), m_entries.length());
+    m_entries.append(entry);
+    this->endInsertRows();
 }
 
 void Liveboard::handleProcessing(const QUrl &uri)
@@ -220,6 +236,9 @@ void Liveboard::handleProcessing(const QUrl &uri)
 
 void Liveboard::handleFinished(QRail::LiveboardEngine::Board *board)
 {
+    qDebug() << "Received new Liveboard";
+    m_factory->unwatchAll();
+    m_factory->watch(board);
     m_liveboard = board;
     emit this->stationChanged();
     emit this->fromChanged();
