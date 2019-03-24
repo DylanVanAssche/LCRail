@@ -104,28 +104,60 @@ void Router::abortCurrentOperation()
 void Router::handleStream(QRail::RouterEngine::Route *route)
 {
     qDebug() << "Inserting:" << route->departureTime() << "|" << route->arrivalTime();
-    bool foundInsertIndex = false;
+    this->setBusy(true);
 
     QDateTime newEntryDepartureTime = route->departureTime();
     for (qint16 i = 0; i < m_routes.length(); i++) {
         QDateTime entryDepartureTime = m_routes.at(i)->departureTime();
+
+        qDebug() << "CHECK ROUTE:"
+                 << "DEPARTURE:" << m_routes.at(i)->departureTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->departureDelay() << "->" << route->departureTime().toString(Qt::ISODate) << "+" << route->departureDelay()
+                 << "ARRIVAL:" << m_routes.at(i)->arrivalTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->arrivalDelay() << "->" << route->arrivalTime().toString(Qt::ISODate) << "+" << route->arrivalDelay();
+
+        // Remove duplicates (updates)
+        if((m_routes.at(i)->departureTime().addSecs(-m_routes.at(i)->departureDelay()) == route->departureTime().addSecs(-route->departureDelay()))
+            && (m_routes.at(i)->arrivalTime().addSecs(-m_routes.at(i)->arrivalDelay()) == route->arrivalTime().addSecs(-route->arrivalDelay()))) {
+
+
+            if(m_routes.at(i)->departureDelay() != route->departureDelay() || m_routes.at(i)->arrivalDelay() != route->arrivalDelay()) {
+                qDebug() << "ROUTE AFFECTED, REPLACING...";
+
+                // Remove old entry
+                this->beginRemoveRows(QModelIndex(), i, i);
+                m_routes.removeAt(i);
+                this->endRemoveRows();
+
+                // Insert new entry
+                this->beginInsertRows(QModelIndex(), i, i);
+                m_routes.insert(i, route);
+                this->endInsertRows();
+
+                // Notify user
+                SailfishOS::createNotification("Route updated!",
+                                               "Route from " + route->departureStation()->departure()->station()->name().value(QLocale::Language::Dutch)
+                                               + " (" + route->departureTime().toString("hh:mm") + ") to "
+                                               + route->arrivalStation()->arrival()->station()->name().value(QLocale::Language::Dutch)
+                                               + " (" + route->arrivalTime().toString("hh:mm") + ") has been updated.",
+                                               "social",
+                                               "lcrail-liveboard-update");
+            }
+
+            return;
+        }
 
         // TO DO: Smarter inserting: Departure and arrival time are now the same, so this works for now
         if (entryDepartureTime > newEntryDepartureTime) {
             this->beginInsertRows(QModelIndex(), i, i);
             m_routes.insert(i, route);
             this->endInsertRows();
-            foundInsertIndex = true;
-            break;
+            return;
         }
     }
 
-    // Entry should be added in front or at the end of the list
-    if (!foundInsertIndex) {
-        this->beginInsertRows(QModelIndex(), m_routes.length(), m_routes.length());
-        m_routes.append(route);
-        this->endInsertRows();
-    }
+    // Entry should be added in front or at the end of the list (if not found above)
+    this->beginInsertRows(QModelIndex(), m_routes.length(), m_routes.length());
+    m_routes.append(route);
+    this->endInsertRows();
 }
 
 void Router::handleFinished(QRail::RouterEngine::Journey *journey)
@@ -152,6 +184,8 @@ bool Router::isBusy() const
 
 void Router::setBusy(const bool &busy)
 {
-    m_busy = busy;
-    emit this->busyChanged();
+    if(m_busy != busy) {
+        m_busy = busy;
+        emit this->busyChanged();
+    }
 }

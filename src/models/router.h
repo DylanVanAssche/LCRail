@@ -32,6 +32,7 @@
 #include "engines/router/routerroute.h"
 #include "engines/vehicle/vehiclevehicle.h"
 #include "trip.h"
+#include "../sailfishos.h"
 
 class Router : public QAbstractListModel
 {
