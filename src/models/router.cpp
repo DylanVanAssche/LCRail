@@ -135,9 +135,9 @@ void Router::handleStream(QRail::RouterEngine::Route *route)
                 // Notify user
                 SailfishOS::createNotification("Route updated!",
                                                "Route from " + route->departureStation()->departure()->station()->name().value(QLocale::Language::Dutch)
-                                               + " (" + route->departureTime().toString("hh:mm") + ") to "
+                                               + " (" + route->departureTime().toLocalTime().toString("hh:mm") + ") to "
                                                + route->arrivalStation()->arrival()->station()->name().value(QLocale::Language::Dutch)
-                                               + " (" + route->arrivalTime().toString("hh:mm") + ") has been updated.",
+                                               + " (" + route->arrivalTime().toLocalTime().toString("hh:mm") + ") has been updated.",
                                                "social",
                                                "lcrail-liveboard-update");
             }
