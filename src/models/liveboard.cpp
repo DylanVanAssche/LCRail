@@ -193,7 +193,8 @@ void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
         QDateTime entryDepartureTime = m_entries.at(i)->intermediaryStops().first()->departureTime();
 
         // Update existing entries (updates)
-        if(m_entries.at(i)->uri() == entry->uri()) {
+        if(m_entries.at(i)->uri() == entry->uri()
+           && m_entries.at(i)->intermediaryStops().first()->departureDelay() != entry->intermediaryStops().first()->departureDelay()) {
             // Remove old entry
             this->beginRemoveRows(QModelIndex(), i, i);
             m_entries.removeAt(i);
@@ -206,7 +207,8 @@ void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
 
             // Notify user
             SailfishOS::createNotification("Liveboard updated!",
-                                           "Vehicle to " + entry->headsign() + " (" + entry->intermediaryStops().first()->departureTime().toString("hh:mm") + ") has been updated.",
+                                           "Vehicle to " + entry->headsign()
+                                           + " (" + entry->intermediaryStops().first()->departureTime().toLocalTime().toString("hh:mm") + ") has been updated.",
                                            "social",
                                            "lcrail-liveboard-update");
             return;
