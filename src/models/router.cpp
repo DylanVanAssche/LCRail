@@ -98,6 +98,7 @@ void Router::abortCurrentOperation()
     if(this->isBusy()) {
         qDebug() << "Abort Planner";
         m_planner->abortCurrentOperation();
+        m_planner->unwatchAll();
     }
 }
 
@@ -111,12 +112,13 @@ void Router::handleStream(QRail::RouterEngine::Route *route)
         QDateTime entryDepartureTime = m_routes.at(i)->departureTime();
 
         qDebug() << "CHECK ROUTE:"
-                 << "DEPARTURE:" << m_routes.at(i)->departureTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->departureDelay() << "->" << route->departureTime().toString(Qt::ISODate) << "+" << route->departureDelay()
-                 << "ARRIVAL:" << m_routes.at(i)->arrivalTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->arrivalDelay() << "->" << route->arrivalTime().toString(Qt::ISODate) << "+" << route->arrivalDelay();
+                 << "DEPARTURE:" << m_routes.at(i)->departureTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->departureDelay() << "vs" << route->departureTime().toString(Qt::ISODate) << "+" << route->departureDelay()
+                 << "ARRIVAL:" << m_routes.at(i)->arrivalTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->arrivalDelay() << "vs" << route->arrivalTime().toString(Qt::ISODate) << "+" << route->arrivalDelay();
 
         // Remove duplicates (updates)
         if((m_routes.at(i)->departureTime().addSecs(-m_routes.at(i)->departureDelay()) == route->departureTime().addSecs(-route->departureDelay()))
             && (m_routes.at(i)->arrivalTime().addSecs(-m_routes.at(i)->arrivalDelay()) == route->arrivalTime().addSecs(-route->arrivalDelay()))) {
+            qDebug() << "FOUND ROUTE! CHECKING DELAYS";
 
 
             if(m_routes.at(i)->departureDelay() != route->departureDelay() || m_routes.at(i)->arrivalDelay() != route->arrivalDelay()) {
