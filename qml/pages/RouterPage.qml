@@ -43,6 +43,7 @@ Page {
     function getData() {
         console.log("Fetching connections")
         _before = new Date();
+        console.warn("$,router," + new Date());
         if(from.length > 0 && to.length > 0) {
             router.getConnections(from, to, departureTime, maxTransfers);
         }
@@ -77,6 +78,7 @@ Page {
                     id: router
                     onBusyChanged: {
                         if(!busy) {
+                            console.warn("$,router," + new Date());
                             _after = new Date();
                             header.description = _after.getTime() - _before.getTime() + " ms";
                         }
