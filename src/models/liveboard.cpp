@@ -46,6 +46,7 @@ Liveboard::Liveboard(QObject *parent): QAbstractListModel(parent)
     m_liveboard = nullptr;
     m_busy = false;
     m_valid = false;
+    m_creating = false;
 }
 
 // Invokers
@@ -59,7 +60,13 @@ void Liveboard::getBoard(QRail::StationEngine::Station *station,
 void Liveboard::getBoard(const QUrl &uri, const QRail::LiveboardEngine::Board::Mode &mode)
 {
     this->setBusy(true);
-    m_factory->getLiveboardByStationURI(uri, QDateTime::currentDateTimeUtc(), QDateTime::currentDateTimeUtc().addSecs(3 * 3600), mode);
+    m_factory->getLiveboardByStationURI(uri, QDateTime::currentDateTimeUtc(), QDateTime::currentDateTimeUtc().addSecs(6*1800), mode);
+}
+
+void Liveboard::getBoard(const QUrl &uri, const QDateTime departureTime, const QRail::LiveboardEngine::Board::Mode &mode)
+{
+    this->setBusy(true);
+    m_factory->getLiveboardByStationURI(uri, departureTime, departureTime.addSecs(3 * 3600), mode);
 }
 
 void Liveboard::clearBoard()
@@ -67,6 +74,7 @@ void Liveboard::clearBoard()
     this->beginResetModel();
     m_entries.clear();
     m_liveboard = nullptr;
+    m_creating = true;
     this->setValid(false);
     this->endResetModel();
 }
@@ -190,38 +198,42 @@ void Liveboard::handleStream(QRail::VehicleEngine::Vehicle *entry)
     this->setBusy(true);
 
     QDateTime newEntryDepartureTime = entry->intermediaryStops().first()->departureTime();
-    for (qint16 i = 0; i < m_entries.length(); i++) {
-        QDateTime entryDepartureTime = m_entries.at(i)->intermediaryStops().first()->departureTime();
-
-        // Update existing entries (updates)
-        if(m_entries.at(i)->uri() == entry->uri()) {
-            if(m_entries.at(i)->intermediaryStops().first()->departureDelay() != entry->intermediaryStops().first()->departureDelay()) {
-                // Remove old entry
-                this->beginRemoveRows(QModelIndex(), i, i);
-                m_entries.removeAt(i);
-                this->endRemoveRows();
-
-                // Insert new entry
+    if(m_creating) {
+        for (qint16 i = 0; i < m_entries.length(); i++) {
+            QDateTime entryDepartureTime = m_entries.at(i)->intermediaryStops().first()->departureTime();
+            // TO DO: Smarter inserting: Departure and arrival time are now the same, so this works for now
+            if (entryDepartureTime > newEntryDepartureTime) {
                 this->beginInsertRows(QModelIndex(), i, i);
                 m_entries.insert(i, entry);
                 this->endInsertRows();
-
-                // Notify user
-                SailfishOS::createNotification("Liveboard updated!",
-                                               "Vehicle to " + entry->headsign()
-                                               + " (" + entry->intermediaryStops().first()->departureTime().toLocalTime().toString("hh:mm") + ") has been updated.",
-                                               "social",
-                                               "lcrail-liveboard-update");
+                return;
             }
-            return;
         }
+    }
+    else {
+        for (qint16 i = 0; i < m_entries.length(); i++) {
+            // Update existing entries (updates)
+            if(m_entries.at(i)->uri() == entry->uri()) {
+                if(m_entries.at(i)->intermediaryStops().first()->departureDelay() != entry->intermediaryStops().first()->departureDelay()) {
+                   /* // Remove old entry
+                    this->beginRemoveRows(QModelIndex(), i, i);
+                    m_entries.removeAt(i);
+                    this->endRemoveRows();
 
-        // TO DO: Smarter inserting: Departure and arrival time are now the same, so this works for now
-        if (entryDepartureTime > newEntryDepartureTime) {
-            this->beginInsertRows(QModelIndex(), i, i);
-            m_entries.insert(i, entry);
-            this->endInsertRows();
-            return;
+                    // Insert new entry
+                    this->beginInsertRows(QModelIndex(), i, i);
+                    m_entries.insert(i, entry);
+                    this->endInsertRows();*/
+
+                    // Notify user
+                    SailfishOS::createNotification("Liveboard updated!",
+                                                   "Vehicle to " + entry->headsign()
+                                                   + " (" + entry->intermediaryStops().first()->departureTime().toLocalTime().toString("hh:mm") + ") has been updated.",
+                                                   "social",
+                                                   "lcrail-liveboard-update");
+                }
+                return;
+            }
         }
     }
 
@@ -242,6 +254,15 @@ void Liveboard::handleProcessing(const QUrl &uri)
 void Liveboard::handleFinished(QRail::LiveboardEngine::Board *board)
 {
     qDebug() << "Received new Liveboard";
+    this->beginResetModel();
+    m_entries.clear();
+    this->endResetModel();
+    for(qint64 e=0; e < board->entries().length(); e++) {
+        this->beginInsertRows(QModelIndex(), e, e);
+        m_entries.insert(e, board->entries().at(e));
+        this->endInsertRows();
+    }
+    m_creating = false;
     m_factory->unwatchAll();
     m_factory->watch(board);
     m_liveboard = board;

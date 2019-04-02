@@ -44,7 +44,12 @@ Page {
             header.title = "Loading ...";
             liveboard.abortCurrentOperation();
             liveboard.clearBoard();
-            liveboard.getBoard(_stationURI);
+            departureTime.setFullYear(2019); // Reproduction data
+            departureTime.setMonth(2);
+            departureTime.setDate(31);
+            console.debug("Fetching liveboard of:" + departureTime.toISOString());
+            console.warn("$,liveboard," + new Date());
+            liveboard.getBoard(_stationURI, departureTime);
         }
     }
 
@@ -97,6 +102,7 @@ Page {
             id: liveboard
             onBusyChanged: {
                 if(!busy) {
+                    console.warn("$,liveboard," + new Date());
                     _after = new Date();
                     header.benchmark = _after.getTime() - _before.getTime() + " ms";
                     header.title = _stationName;
