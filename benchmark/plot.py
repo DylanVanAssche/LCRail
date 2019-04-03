@@ -92,16 +92,33 @@ if __name__ == "__main__":
     nethogs.parse()
     top = TopParser("lcrail-top-original.txt", "lcrail")
     top.parse()
+
+    # CPU usage
     plt.title("CPU usage")
-    plt.plot(top.timeline, top.cpu)
     plt.xlabel("Time (s)")
     plt.ylabel("Usage (%)")
+    plt.ylim(0, 100)
+    plt.plot(top.timeline, top.cpu)
     plt.show()
+
+    # RAM usage
     plt.title("RAM usage")
     plt.xlabel("Time (s)")
     plt.ylabel("Usage (%)")
+    plt.ylim(0, 25)
     plt.plot(top.timeline, top.mem)
     plt.show()
+
+    # CPU and RAM usage
+    plt.title("CPU and RAM usage")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Usage (%)")
+    plt.ylim(0, 100)
+    plt.plot(top.timeline, top.cpu)
+    plt.plot(top.timeline, top.mem)
+    plt.show()
+
+    # Network usage
     plt.title("Network usage")
     plt.xlabel("Time (s)")
     plt.ylabel("Usage (MB)")
