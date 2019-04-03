@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class BaseParser:
-    def __init__(self, input_file, process):
+    def __init__(self, input_file, process=None):
         self._input_file = input_file
         self._lines = []
         self._timestamps = []
@@ -49,7 +49,7 @@ class NethogsParser(BaseParser):
             except Exception as e:
                 print("ERROR: {} for parsing line: {}".format(e, line))
         self.convert_timestamps()
-        print("Nethogs lines: {}".format(len(self._lines)))
+        print("Nethogs lines: {}".format(len(self._sent)))
 
     @property
     def sent(self):
@@ -77,7 +77,7 @@ class TopParser(BaseParser):
             except Exception as e:
                 print("ERROR: {} for parsing line: {}".format(e, line))
         self.convert_timestamps()
-        print("Top lines: {}".format(len(self._lines)))
+        print("Top lines: {}".format(len(self._cpu)))
 
     @property
     def cpu(self):
@@ -87,11 +87,68 @@ class TopParser(BaseParser):
     def mem(self):
         return self._mem
 
+class UserInformedTimeParser(BaseParser):
+    def __init__(self, input_file):
+        super().__init__(input_file)
+        self._liveboard_timestamps = []
+        self._planner_timestamps = []
+        self._liveboard = []
+        self._planner = []
+
+    def parse(self):
+        for line in self._lines:
+            try:
+                if "$" in line:
+                    _, name, timestamp = line.split(",")
+                    day, month, date, time, year, timezone = timestamp.split()
+                    if "liveboard" in name:
+                        self._liveboard_timestamps.append(datetime.strptime(time, "%H:%M:%S").timestamp())
+                    elif "planner" in name:
+                        self._planner_timestamps.append(datetime.strptime(time, "%H:%M:%S").timestamp())
+                    else:
+                        raise NotImplementedError("Unknown benchmark name")
+            except Exception as e:
+                print("ERROR: {} for parsing line: {}".format(e, line))
+        self.convert_liveboard()
+        self.convert_planner()
+
+    def convert_liveboard(self):
+        # Liveboard starts with a timestamp and ends with a timestamp, both are always in pairs
+        for l in range(0, len(self._liveboard_timestamps), 2):
+            liveboard_requested = self._liveboard_timestamps[l]
+            liveboard_processed = self._liveboard_timestamps[l + 1]
+            self._liveboard.append(liveboard_processed - liveboard_requested)
+        print("Liveboard lines: {}".format(len(self._liveboard)))
+
+    def convert_planner(self):
+        # Planner starts with a timestamp and ends with a timestamp, both are always in pairs
+        for l in range(0, len(self._planner_timestamps), 2):
+            planner_requested = self._planner_timestamps[l]
+            planner_processed = self._planner_timestamps[l + 1]
+            self._planner.append(planner_processed - planner_requested)
+        print("Planner lines: {}".format(len(self._planner)))
+
+    @property
+    def liveboard(self):
+        return self._liveboard
+
+    @property
+    def planner(self):
+        return self._planner
+
+
 if __name__ == "__main__":
-    nethogs = NethogsParser("lcrail-nethogs-original.txt", "lcrail")
+    # Parse Nethogs
+    nethogs = NethogsParser("lcrail-nethogs-original3.txt", "lcrail")
     nethogs.parse()
-    top = TopParser("lcrail-top-original.txt", "lcrail")
+
+    # Parse Top
+    top = TopParser("lcrail-top-original3.txt", "lcrail")
     top.parse()
+
+    # Parse User Informed Time
+    user_informed_time = UserInformedTimeParser("lcrail-userinformedtime-original3.txt")
+    user_informed_time.parse()
 
     # CPU usage
     plt.title("CPU usage")
@@ -125,4 +182,18 @@ if __name__ == "__main__":
     plt.plot(nethogs.timeline, nethogs.sent, label="Sent")
     plt.plot(nethogs.timeline, nethogs.received, label="Received")
     plt.legend()
+    plt.show()
+
+    # Liveboard refresh time
+    plt.title("Liveboard refresh time")
+    plt.ylabel("Time (s)")
+    plt.xlabel("Measurement")
+    plt.boxplot(user_informed_time.liveboard)
+    plt.show()
+
+    # Planner refresh time
+    plt.title("Planner refresh time")
+    plt.ylabel("Time (s)")
+    plt.xlabel("Measurement")
+    plt.boxplot(user_informed_time.planner)
     plt.show()
