@@ -73,7 +73,6 @@ class TopParser(BaseParser):
                     self._timestamps.append(datetime.strptime(time, "%H:%M:%S").timestamp())
                     self._cpu.append(float(cpu))
                     self._mem.append(float(mem))
-                    print(self._cpu)
             except Exception as e:
                 print("ERROR: {} for parsing line: {}".format(e, line))
         self.convert_timestamps()
