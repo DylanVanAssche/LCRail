@@ -1,0 +1,19 @@
+Adding local address: 192.168.2.15
+Adding local address: fe80::f084:5bff:fe91:43f7
+Ethernet link detected
+Adding local address: 192.168.0.209
+Adding local address: 2a02:1811:142f:c800:5256:a8ff:fe01:5b0f
+Adding local address: fe80::5256:a8ff:fe01:5b0f
+Ethernet link detected
+
+Refreshing:
+unknown TCP/0/0	0	0
+
+Refreshing:
+/usr/bin/lcrail/28813/100000	0.00323391	0.10315
+unknown TCP/0/0	0	0
+
+Refreshing:
+/usr/bin/lcrail/28813/100000	0.00376701	0.103717
+unknown TCP/0/0	0	0
+

@@ -1,0 +1,43 @@
+Wed Apr  3 19:59:42 CEST 2019 top - 19:59:42 up  4:07,  1 user,  load average: 0.73, 0.59, 0.53
+Wed Apr  3 19:59:42 CEST 2019 Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Wed Apr  3 19:59:42 CEST 2019 %Cpu(s): 11.5 us,  4.9 sy,  0.0 ni, 80.3 id,  0.0 wa,  1.6 hi,  1.6 si,  0.0 st
+Wed Apr  3 19:59:42 CEST 2019 MiB Mem :   7902.9 total,   4255.4 free,   1462.8 used,   2184.7 buff/cache
+Wed Apr  3 19:59:42 CEST 2019 MiB Swap:   8192.0 total,   8186.0 free,      6.0 used.   6003.3 avail Mem 
+Wed Apr  3 19:59:42 CEST 2019 
+Wed Apr  3 19:59:42 CEST 2019   PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+Wed Apr  3 19:59:45 CEST 2019  4444 dylan     20   0 2383380 366276 186284 S   6.7   4.5   0:27.79 firefox
+Wed Apr  3 19:59:45 CEST 2019 
+Wed Apr  3 19:59:45 CEST 2019 top - 19:59:45 up  4:07,  1 user,  load average: 0.73, 0.59, 0.53
+Wed Apr  3 19:59:45 CEST 2019 Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Wed Apr  3 19:59:45 CEST 2019 %Cpu(s): 14.6 us,  3.1 sy,  0.0 ni, 81.3 id,  0.0 wa,  0.5 hi,  0.4 si,  0.0 st
+Wed Apr  3 19:59:45 CEST 2019 MiB Mem :   7902.9 total,   4255.4 free,   1462.8 used,   2184.7 buff/cache
+Wed Apr  3 19:59:45 CEST 2019 MiB Swap:   8192.0 total,   8186.0 free,      6.0 used.   6003.3 avail Mem 
+Wed Apr  3 19:59:45 CEST 2019 
+Wed Apr  3 19:59:45 CEST 2019   PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+Wed Apr  3 19:59:48 CEST 2019  4444 dylan     20   0 2383380 366276 186284 S  14.3   4.5   0:28.22 firefox
+Wed Apr  3 19:59:48 CEST 2019 
+Wed Apr  3 19:59:48 CEST 2019 top - 19:59:48 up  4:07,  1 user,  load average: 0.91, 0.63, 0.55
+Wed Apr  3 19:59:48 CEST 2019 Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Wed Apr  3 19:59:48 CEST 2019 %Cpu(s): 16.8 us,  5.2 sy,  0.0 ni, 76.9 id,  0.0 wa,  0.5 hi,  0.6 si,  0.0 st
+Wed Apr  3 19:59:48 CEST 2019 MiB Mem :   7902.9 total,   4261.1 free,   1455.7 used,   2186.1 buff/cache
+Wed Apr  3 19:59:48 CEST 2019 MiB Swap:   8192.0 total,   8186.0 free,      6.0 used.   6009.0 avail Mem 
+Wed Apr  3 19:59:48 CEST 2019 
+Wed Apr  3 19:59:48 CEST 2019   PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+Wed Apr  3 19:59:51 CEST 2019  4444 dylan     20   0 2384076 368076 186316 S  19.0   4.5   0:28.79 firefox
+Wed Apr  3 19:59:51 CEST 2019 
+Wed Apr  3 19:59:51 CEST 2019 top - 19:59:51 up  4:07,  1 user,  load average: 1.00, 0.65, 0.55
+Wed Apr  3 19:59:51 CEST 2019 Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Wed Apr  3 19:59:51 CEST 2019 %Cpu(s): 26.9 us,  7.6 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.6 hi,  0.7 si,  0.0 st
+Wed Apr  3 19:59:51 CEST 2019 MiB Mem :   7902.9 total,   4269.9 free,   1472.8 used,   2160.2 buff/cache
+Wed Apr  3 19:59:51 CEST 2019 MiB Swap:   8192.0 total,   8186.0 free,      6.0 used.   6017.8 avail Mem 
+Wed Apr  3 19:59:51 CEST 2019 
+Wed Apr  3 19:59:51 CEST 2019   PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+Wed Apr  3 19:59:54 CEST 2019  4444 dylan     20   0 2358060 359304 174284 S  30.2   4.4   0:29.70 firefox
+Wed Apr  3 19:59:54 CEST 2019 
+Wed Apr  3 19:59:54 CEST 2019 top - 19:59:54 up  4:07,  1 user,  load average: 1.00, 0.65, 0.55
+Wed Apr  3 19:59:54 CEST 2019 Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Wed Apr  3 19:59:54 CEST 2019 %Cpu(s): 20.9 us,  4.7 sy,  0.0 ni, 73.3 id,  0.0 wa,  0.6 hi,  0.5 si,  0.0 st
+Wed Apr  3 19:59:54 CEST 2019 MiB Mem :   7902.9 total,   4267.9 free,   1475.0 used,   2160.0 buff/cache
+Wed Apr  3 19:59:54 CEST 2019 MiB Swap:   8192.0 total,   8186.0 free,      6.0 used.   6015.8 avail Mem 
+Wed Apr  3 19:59:54 CEST 2019 
+Wed Apr  3 19:59:54 CEST 2019   PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
