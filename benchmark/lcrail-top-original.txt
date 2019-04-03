@@ -1,0 +1,1788 @@
+top - 19:04:53 up 2 days, 21:04,  2 users,  load average: 0.20, 0.39, 0.60
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.7%us,  9.3%sy,  1.7%ni, 69.6%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791564k used,    37128k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415620k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S 11.0  7.9   0:28.50 lcrail                                                                                                                                                                           
+
+
+top - 19:04:56 up 2 days, 21:05,  2 users,  load average: 0.18, 0.38, 0.60
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.8%us,  4.8%sy,  1.4%ni, 78.0%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791488k used,    37204k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415636k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.3  7.9   0:28.69 lcrail                                                                                                                                                                           
+
+
+top - 19:05:00 up 2 days, 21:05,  2 users,  load average: 0.18, 0.38, 0.60
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.0%us,  4.2%sy,  1.0%ni, 77.0%id,  1.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791576k used,    37116k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415640k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.6  7.9   0:28.86 lcrail                                                                                                                                                                           
+
+
+top - 19:05:03 up 2 days, 21:05,  2 users,  load average: 0.17, 0.37, 0.59
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.2%us,  7.4%sy,  0.7%ni, 71.3%id,  1.7%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   791596k used,    37096k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415652k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  7.0  7.9   0:29.07 lcrail                                                                                                                                                                           
+
+
+top - 19:05:06 up 2 days, 21:05,  2 users,  load average: 0.17, 0.37, 0.59
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.4%us,  5.5%sy,  1.7%ni, 75.8%id,  1.4%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   791644k used,    37048k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415672k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  4.7  7.9   0:29.21 lcrail                                                                                                                                                                           
+
+
+top - 19:05:09 up 2 days, 21:05,  2 users,  load average: 0.15, 0.37, 0.59
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.3%us,  6.6%sy,  1.3%ni, 75.1%id,  1.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   791876k used,    36816k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415884k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m R  5.6  7.9   0:29.38 lcrail                                                                                                                                                                           
+
+
+top - 19:05:12 up 2 days, 21:05,  2 users,  load average: 0.14, 0.36, 0.59
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.4%us,  8.7%sy,  1.7%ni, 70.8%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791908k used,    36784k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415800k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  9.7  7.9   0:29.67 lcrail                                                                                                                                                                           
+
+
+top - 19:05:15 up 2 days, 21:05,  2 users,  load average: 0.14, 0.36, 0.59
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.8%us,  5.6%sy,  1.4%ni, 75.5%id,  0.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   792172k used,    36520k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415820k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.0  7.9   0:29.85 lcrail                                                                                                                                                                           
+
+
+top - 19:05:18 up 2 days, 21:05,  2 users,  load average: 0.13, 0.36, 0.58
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.4%us,  7.6%sy,  1.4%ni, 70.9%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792048k used,    36644k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415880k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m R  8.3  7.9   0:30.10 lcrail                                                                                                                                                                           
+
+
+top - 19:05:21 up 2 days, 21:05,  2 users,  load average: 0.13, 0.36, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.0%us,  7.0%sy,  1.7%ni, 75.9%id,  2.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792276k used,    36416k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415960k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.7  7.9   0:30.27 lcrail                                                                                                                                                                           
+
+
+top - 19:05:24 up 2 days, 21:05,  2 users,  load average: 0.12, 0.35, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.3%us,  8.7%sy,  1.7%ni, 69.9%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   791984k used,    36708k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415988k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  9.0  7.9   0:30.54 lcrail                                                                                                                                                                           
+
+
+top - 19:05:27 up 2 days, 21:05,  2 users,  load average: 0.19, 0.36, 0.58
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.5%us,  8.2%sy,  1.7%ni, 68.3%id,  1.4%wa,  0.0%hi,  1.0%si,  0.0%st
+Mem:    828692k total,   792112k used,    36580k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415992k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m R 13.0  7.9   0:30.93 lcrail                                                                                                                                                                           
+
+
+top - 19:05:30 up 2 days, 21:05,  2 users,  load average: 0.19, 0.36, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.7%us,  4.9%sy,  1.8%ni, 79.6%id,  1.1%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791708k used,    36984k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415992k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  3.3  7.9   0:31.03 lcrail                                                                                                                                                                           
+
+
+top - 19:05:33 up 2 days, 21:05,  2 users,  load average: 0.18, 0.36, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 11.4%us,  5.7%sy,  1.7%ni, 79.9%id,  1.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791920k used,    36772k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415996k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:31.09 lcrail                                                                                                                                                                           
+
+
+top - 19:05:36 up 2 days, 21:05,  2 users,  load average: 0.18, 0.36, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.5%us,  4.2%sy,  1.7%ni, 76.3%id,  5.2%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791820k used,    36872k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416032k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:31.15 lcrail                                                                                                                                                                           
+
+
+top - 19:05:39 up 2 days, 21:05,  2 users,  load average: 0.16, 0.35, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s):  8.9%us,  5.8%sy,  1.7%ni, 82.5%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792404k used,    36288k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416240k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.3  7.9   0:31.19 lcrail                                                                                                                                                                           
+
+
+top - 19:05:42 up 2 days, 21:05,  2 users,  load average: 0.15, 0.34, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 10.8%us,  2.4%sy,  2.4%ni, 84.4%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792372k used,    36320k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416140k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:31.25 lcrail                                                                                                                                                                           
+
+
+top - 19:05:45 up 2 days, 21:05,  2 users,  load average: 0.15, 0.34, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 11.3%us,  4.8%sy,  1.0%ni, 82.5%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792092k used,    36600k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416140k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:31.31 lcrail                                                                                                                                                                           
+
+
+top - 19:05:48 up 2 days, 21:05,  2 users,  load average: 0.14, 0.34, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 11.1%us,  6.4%sy,  1.3%ni, 80.1%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   791992k used,    36700k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416140k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:31.37 lcrail                                                                                                                                                                           
+
+
+top - 19:05:51 up 2 days, 21:05,  2 users,  load average: 0.14, 0.34, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 10.9%us,  4.6%sy,  1.8%ni, 78.9%id,  3.9%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792152k used,    36540k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416232k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.3  7.9   0:31.44 lcrail                                                                                                                                                                           
+
+
+top - 19:05:54 up 2 days, 21:05,  2 users,  load average: 0.13, 0.33, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 11.4%us,  4.8%sy,  1.7%ni, 81.0%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792120k used,    36572k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416236k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:31.50 lcrail                                                                                                                                                                           
+
+
+top - 19:05:57 up 2 days, 21:06,  2 users,  load average: 0.20, 0.34, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 10.8%us,  5.4%sy,  1.4%ni, 81.0%id,  1.4%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792140k used,    36552k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416236k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:31.56 lcrail                                                                                                                                                                           
+
+
+top - 19:06:00 up 2 days, 21:06,  2 users,  load average: 0.20, 0.34, 0.57
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+Cpu(s): 27.2%us,  6.5%sy,  2.0%ni, 62.2%id,  1.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   792192k used,    36500k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416340k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m R 16.2  7.9   0:32.05 lcrail                                                                                                                                                                           
+
+
+top - 19:06:03 up 2 days, 21:06,  2 users,  load average: 0.34, 0.37, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.8%us,  4.7%sy,  1.3%ni, 78.5%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792152k used,    36540k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416360k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  3.0  7.9   0:32.14 lcrail                                                                                                                                                                           
+
+
+top - 19:06:06 up 2 days, 21:06,  2 users,  load average: 0.34, 0.37, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.1%us,  3.8%sy,  2.4%ni, 78.5%id,  3.1%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792188k used,    36504k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416376k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:32.20 lcrail                                                                                                                                                                           
+
+
+top - 19:06:09 up 2 days, 21:06,  2 users,  load average: 0.31, 0.36, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.6%us,  6.6%sy,  1.7%ni, 73.7%id,  2.4%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   792448k used,    36244k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416612k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  7.6  7.9   0:32.43 lcrail                                                                                                                                                                           
+
+
+top - 19:06:12 up 2 days, 21:06,  2 users,  load average: 0.29, 0.36, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.5%us,  6.7%sy,  2.4%ni, 69.0%id,  2.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   792600k used,    36092k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416516k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  9.3  7.9   0:32.71 lcrail                                                                                                                                                                           
+
+
+top - 19:06:15 up 2 days, 21:06,  2 users,  load average: 0.29, 0.36, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.8%us, 10.7%sy,  2.0%ni, 66.8%id,  1.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   793128k used,    35564k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416584k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  7.3  7.9   0:32.93 lcrail                                                                                                                                                                           
+
+
+top - 19:06:18 up 2 days, 21:06,  2 users,  load average: 0.43, 0.39, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.4%us,  7.3%sy,  2.1%ni, 73.4%id,  1.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793068k used,    35624k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416644k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.7  7.9   0:33.13 lcrail                                                                                                                                                                           
+
+
+top - 19:06:21 up 2 days, 21:06,  2 users,  load average: 0.43, 0.39, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.6%us,  7.5%sy,  0.7%ni, 71.1%id,  4.4%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   793148k used,    35544k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416704k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.0  7.9   0:33.31 lcrail                                                                                                                                                                           
+
+
+top - 19:06:24 up 2 days, 21:06,  2 users,  load average: 0.39, 0.38, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.9%us,  5.6%sy,  2.3%ni, 77.9%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793016k used,    35676k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416716k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.0  7.9   0:33.46 lcrail                                                                                                                                                                           
+
+
+top - 19:06:27 up 2 days, 21:06,  2 users,  load average: 0.36, 0.37, 0.58
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+Cpu(s): 11.5%us,  5.6%sy,  1.0%ni, 80.6%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   793108k used,    35584k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416712k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m R  4.7  7.9   0:33.60 lcrail                                                                                                                                                                           
+
+
+top - 19:06:30 up 2 days, 21:06,  2 users,  load average: 0.36, 0.37, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.4%us,  6.8%sy,  2.1%ni, 73.6%id,  0.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   793100k used,    35592k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416720k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.7  7.9   0:33.80 lcrail                                                                                                                                                                           
+
+
+top - 19:06:33 up 2 days, 21:06,  2 users,  load average: 0.41, 0.38, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.6%us,  5.4%sy,  1.4%ni, 76.9%id,  1.4%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   793176k used,    35516k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416740k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.0  7.9   0:33.95 lcrail                                                                                                                                                                           
+
+
+top - 19:06:36 up 2 days, 21:06,  2 users,  load average: 0.41, 0.38, 0.58
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.1%us,  4.5%sy,  2.1%ni, 76.6%id,  3.8%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793412k used,    35280k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416768k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  7.9   0:34.00 lcrail                                                                                                                                                                           
+
+
+top - 19:06:39 up 2 days, 21:06,  2 users,  load average: 0.38, 0.38, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.5%us,  6.5%sy,  1.0%ni, 74.9%id,  2.1%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793708k used,    34984k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416976k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.3  7.9   0:34.16 lcrail                                                                                                                                                                           
+
+
+top - 19:06:42 up 2 days, 21:06,  2 users,  load average: 0.35, 0.37, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.0%us,  3.8%sy,  2.4%ni, 76.3%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   793412k used,    35280k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416880k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.3  7.9   0:34.32 lcrail                                                                                                                                                                           
+
+
+top - 19:06:45 up 2 days, 21:06,  2 users,  load average: 0.35, 0.37, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.4%us,  6.8%sy,  2.1%ni, 73.6%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793636k used,    35056k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416896k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.0  7.9   0:34.50 lcrail                                                                                                                                                                           
+
+
+top - 19:06:48 up 2 days, 21:06,  2 users,  load average: 0.32, 0.36, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.1%us,  6.0%sy,  2.3%ni, 74.8%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793372k used,    35320k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416904k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  4.7  7.9   0:34.64 lcrail                                                                                                                                                                           
+
+
+top - 19:06:51 up 2 days, 21:06,  2 users,  load average: 0.32, 0.36, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.3%us,  6.5%sy,  1.3%ni, 73.3%id,  3.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   793868k used,    34824k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417044k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.0  7.9   0:34.79 lcrail                                                                                                                                                                           
+
+
+top - 19:06:54 up 2 days, 21:06,  2 users,  load average: 0.29, 0.36, 0.57
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.0%us,  5.9%sy,  1.4%ni, 75.3%id,  1.4%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793896k used,    34796k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417084k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.0  7.9   0:34.94 lcrail                                                                                                                                                                           
+
+
+top - 19:06:57 up 2 days, 21:07,  2 users,  load average: 0.27, 0.35, 0.56
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 10.7%us,  2.8%sy,  3.1%ni, 82.0%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   793928k used,    34764k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417084k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  7.9   0:34.99 lcrail                                                                                                                                                                           
+
+
+top - 19:07:00 up 2 days, 21:07,  2 users,  load average: 0.27, 0.35, 0.56
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.7%us,  4.1%sy,  1.7%ni, 80.4%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793952k used,    34740k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417084k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  7.9   0:35.04 lcrail                                                                                                                                                                           
+
+
+top - 19:07:03 up 2 days, 21:07,  2 users,  load average: 0.25, 0.35, 0.56
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.7%us,  5.1%sy,  4.1%ni, 76.7%id,  1.4%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794044k used,    34648k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417084k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.3  7.9   0:35.11 lcrail                                                                                                                                                                           
+
+
+top - 19:07:06 up 2 days, 21:07,  2 users,  load average: 0.25, 0.35, 0.56
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.2%us,  5.9%sy,  2.4%ni, 76.0%id,  3.5%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793888k used,    34804k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417092k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  7.9   0:35.16 lcrail                                                                                                                                                                           
+
+
+top - 19:07:09 up 2 days, 21:07,  2 users,  load average: 0.23, 0.34, 0.56
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.1%us,  4.1%sy,  1.7%ni, 79.4%id,  1.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794048k used,    34644k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417196k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.3  7.9   0:35.23 lcrail                                                                                                                                                                           
+
+
+top - 19:07:12 up 2 days, 21:07,  2 users,  load average: 0.21, 0.34, 0.55
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.0%us,  4.8%sy,  1.7%ni, 80.5%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793964k used,    34728k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417188k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  7.9   0:35.28 lcrail                                                                                                                                                                           
+
+
+top - 19:07:15 up 2 days, 21:07,  2 users,  load average: 0.21, 0.34, 0.55
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.3%us,  2.0%sy,  1.7%ni, 80.9%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793988k used,    34704k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417188k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:35.34 lcrail                                                                                                                                                                           
+
+
+top - 19:07:18 up 2 days, 21:07,  2 users,  load average: 0.19, 0.33, 0.55
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.5%us,  3.5%sy,  2.8%ni, 79.6%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793576k used,    35116k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417188k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:35.40 lcrail                                                                                                                                                                           
+
+
+top - 19:07:21 up 2 days, 21:07,  2 users,  load average: 0.19, 0.33, 0.55
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.0%us,  5.8%sy,  3.4%ni, 74.2%id,  4.5%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794088k used,    34604k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417264k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  7.9   0:35.45 lcrail                                                                                                                                                                           
+
+
+top - 19:07:24 up 2 days, 21:07,  2 users,  load average: 0.18, 0.32, 0.55
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.4%us,  4.8%sy,  1.4%ni, 80.1%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794108k used,    34584k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417268k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:35.51 lcrail                                                                                                                                                                           
+
+
+top - 19:07:27 up 2 days, 21:07,  2 users,  load average: 0.16, 0.32, 0.55
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.6%us,  3.8%sy,  2.4%ni, 80.2%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794012k used,    34680k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417268k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:35.57 lcrail                                                                                                                                                                           
+
+
+top - 19:07:30 up 2 days, 21:07,  2 users,  load average: 0.16, 0.32, 0.55
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.0%us,  4.1%sy,  2.1%ni, 79.5%id,  1.4%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794160k used,    34532k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417272k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  7.9   0:35.63 lcrail                                                                                                                                                                           
+
+
+top - 19:07:33 up 2 days, 21:07,  2 users,  load average: 0.15, 0.31, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.1%us,  5.1%sy,  1.7%ni, 71.1%id,  2.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794112k used,    34580k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417276k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  7.0  8.0   0:35.84 lcrail                                                                                                                                                                           
+
+
+top - 19:07:36 up 2 days, 21:07,  2 users,  load average: 0.15, 0.31, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.2%us,  5.4%sy,  1.7%ni, 74.7%id,  3.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   793832k used,    34860k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417280k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:35.90 lcrail                                                                                                                                                                           
+
+
+top - 19:07:39 up 2 days, 21:07,  2 users,  load average: 0.14, 0.31, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.3%us,  6.2%sy,  1.6%ni, 69.8%id,  2.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794228k used,    34464k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417308k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  8.6  8.0   0:36.16 lcrail                                                                                                                                                                           
+
+
+top - 19:07:42 up 2 days, 21:07,  2 users,  load average: 0.21, 0.32, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.9%us,  7.4%sy,  2.4%ni, 67.6%id,  2.0%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   794268k used,    34424k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417300k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  9.0  8.0   0:36.43 lcrail                                                                                                                                                                           
+
+
+top - 19:07:45 up 2 days, 21:07,  2 users,  load average: 0.21, 0.32, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.2%us,  3.4%sy,  2.0%ni, 81.3%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794292k used,    34400k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417296k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.3  8.0   0:36.50 lcrail                                                                                                                                                                           
+
+
+top - 19:07:48 up 2 days, 21:07,  2 users,  load average: 0.19, 0.31, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.7%us,  3.5%sy,  1.9%ni, 73.6%id,  1.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794356k used,    34336k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417296k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  7.0  8.0   0:36.71 lcrail                                                                                                                                                                           
+
+
+top - 19:07:51 up 2 days, 21:07,  2 users,  load average: 0.19, 0.31, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.8%us,  5.2%sy,  2.1%ni, 74.1%id,  4.8%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794456k used,    34236k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417316k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.3  8.0   0:36.78 lcrail                                                                                                                                                                           
+
+
+top - 19:07:54 up 2 days, 21:07,  2 users,  load average: 0.18, 0.31, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.8%us,  3.8%sy,  1.7%ni, 80.7%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794544k used,    34148k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417356k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  8.0   0:36.83 lcrail                                                                                                                                                                           
+
+
+top - 19:07:57 up 2 days, 21:08,  2 users,  load average: 0.16, 0.30, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.4%us,  3.4%sy,  1.7%ni, 80.4%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794756k used,    33936k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417364k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.3  8.0   0:36.90 lcrail                                                                                                                                                                           
+
+
+top - 19:08:00 up 2 days, 21:08,  2 users,  load average: 0.16, 0.30, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.3%us,  4.8%sy,  2.0%ni, 79.9%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794592k used,    34100k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417364k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  8.0   0:36.95 lcrail                                                                                                                                                                           
+
+
+top - 19:08:03 up 2 days, 21:08,  2 users,  load average: 0.23, 0.32, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.8%us,  4.5%sy,  2.4%ni, 76.7%id,  0.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   794688k used,    34004k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417360k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.0  8.0   0:37.10 lcrail                                                                                                                                                                           
+
+
+top - 19:08:06 up 2 days, 21:08,  2 users,  load average: 0.23, 0.32, 0.54
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.2%us,  8.8%sy,  1.7%ni, 67.0%id,  3.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   794568k used,    34124k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417384k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.3  8.0   0:37.29 lcrail                                                                                                                                                                           
+
+
+top - 19:08:09 up 2 days, 21:08,  2 users,  load average: 0.21, 0.31, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.3%us,  7.1%sy,  1.4%ni, 73.2%id,  2.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794932k used,    33760k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417548k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  6.3  8.0   0:37.48 lcrail                                                                                                                                                                           
+
+
+top - 19:08:12 up 2 days, 21:08,  2 users,  load average: 0.19, 0.31, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.0%us,  4.1%sy,  2.4%ni, 80.4%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794592k used,    34100k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417524k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  8.0   0:37.53 lcrail                                                                                                                                                                           
+
+
+top - 19:08:15 up 2 days, 21:08,  2 users,  load average: 0.19, 0.31, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.7%us,  3.7%sy,  1.3%ni, 76.0%id,  1.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794712k used,    33980k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417532k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.6  8.0   0:37.70 lcrail                                                                                                                                                                           
+
+
+top - 19:08:18 up 2 days, 21:08,  2 users,  load average: 0.18, 0.30, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.6%us,  3.3%sy,  1.7%ni, 75.7%id,  0.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   794708k used,    33984k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417540k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.7  8.0   0:37.87 lcrail                                                                                                                                                                           
+
+
+top - 19:08:21 up 2 days, 21:08,  2 users,  load average: 0.18, 0.30, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.9%us,  6.6%sy,  2.3%ni, 71.4%id,  3.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794688k used,    34004k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417656k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  5.0  8.0   0:38.02 lcrail                                                                                                                                                                           
+
+
+top - 19:08:24 up 2 days, 21:08,  2 users,  load average: 0.16, 0.30, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.4%us,  4.8%sy,  2.1%ni, 79.1%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794844k used,    33848k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417684k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  8.0   0:38.07 lcrail                                                                                                                                                                           
+
+
+top - 19:08:27 up 2 days, 21:08,  2 users,  load average: 0.15, 0.29, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 21.7%us,  6.8%sy,  1.9%ni, 67.0%id,  1.9%wa,  0.0%hi,  0.6%si,  0.0%st
+Mem:    828692k total,   794488k used,    34204k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417688k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S 10.0  8.0   0:38.37 lcrail                                                                                                                                                                           
+
+
+top - 19:08:30 up 2 days, 21:08,  2 users,  load average: 0.15, 0.29, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.3%us,  2.3%sy,  2.3%ni, 73.2%id,  1.3%wa,  0.0%hi,  0.6%si,  0.0%st
+Mem:    828692k total,   794728k used,    33964k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417700k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  8.3  8.0   0:38.62 lcrail                                                                                                                                                                           
+
+
+top - 19:08:33 up 2 days, 21:08,  2 users,  load average: 0.14, 0.29, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.6%us,  4.3%sy,  1.7%ni, 76.4%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794852k used,    33840k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417704k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.3  8.0   0:38.69 lcrail                                                                                                                                                                           
+
+
+top - 19:08:36 up 2 days, 21:08,  2 users,  load average: 0.14, 0.29, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.8%us,  6.2%sy,  2.4%ni, 73.5%id,  1.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   795012k used,    33680k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417800k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  4.3  8.0   0:38.82 lcrail                                                                                                                                                                           
+
+
+top - 19:08:39 up 2 days, 21:08,  2 users,  load average: 0.13, 0.28, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.8%us,  4.5%sy,  1.4%ni, 79.2%id,  2.1%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795356k used,    33336k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417932k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:38.88 lcrail                                                                                                                                                                           
+
+
+top - 19:08:42 up 2 days, 21:08,  2 users,  load average: 0.12, 0.28, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 11.5%us,  4.2%sy,  2.1%ni, 81.2%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795024k used,    33668k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417904k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  8.0   0:38.93 lcrail                                                                                                                                                                           
+
+
+top - 19:08:45 up 2 days, 21:08,  2 users,  load average: 0.12, 0.28, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.9%us,  3.1%sy,  2.1%ni, 79.9%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795048k used,    33644k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417904k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  1.7  8.0   0:38.98 lcrail                                                                                                                                                                           
+
+
+top - 19:08:48 up 2 days, 21:08,  2 users,  load average: 0.19, 0.29, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.7%us,  3.4%sy,  1.7%ni, 78.8%id,  1.4%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794836k used,    33856k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417912k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:39.04 lcrail                                                                                                                                                                           
+
+
+top - 19:08:51 up 2 days, 21:08,  2 users,  load average: 0.19, 0.29, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.7%us,  6.2%sy,  2.4%ni, 72.2%id,  5.5%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   794924k used,    33768k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417960k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:39.10 lcrail                                                                                                                                                                           
+
+
+top - 19:08:54 up 2 days, 21:08,  2 users,  load average: 0.17, 0.28, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.8%us,  3.4%sy,  2.4%ni, 79.7%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795388k used,    33304k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417992k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:39.16 lcrail                                                                                                                                                                           
+
+
+top - 19:08:57 up 2 days, 21:09,  2 users,  load average: 0.16, 0.28, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 13.6%us,  4.4%sy,  2.4%ni, 79.0%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795312k used,    33380k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417992k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:39.22 lcrail                                                                                                                                                                           
+
+
+top - 19:09:00 up 2 days, 21:09,  2 users,  load average: 0.16, 0.28, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.0%us,  5.1%sy,  2.0%ni, 78.2%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795340k used,    33352k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417992k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:39.28 lcrail                                                                                                                                                                           
+
+
+top - 19:09:03 up 2 days, 21:09,  2 users,  load average: 0.23, 0.29, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.5%us,  4.7%sy,  2.0%ni, 75.4%id,  1.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795436k used,    33256k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418000k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  3.3  8.0   0:39.38 lcrail                                                                                                                                                                           
+
+
+top - 19:09:06 up 2 days, 21:09,  2 users,  load average: 0.23, 0.29, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.2%us,  6.2%sy,  2.1%ni, 72.7%id,  3.8%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   795572k used,    33120k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418020k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  158m  64m  28m S  2.0  8.0   0:39.44 lcrail                                                                                                                                                                           
+
+
+top - 19:09:09 up 2 days, 21:09,  2 users,  load average: 0.21, 0.29, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.5%us,  5.4%sy,  1.9%ni, 71.7%id,  1.9%wa,  0.0%hi,  0.6%si,  0.0%st
+Mem:    828692k total,   797828k used,    30864k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418140k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  7.6  8.2   0:39.67 lcrail                                                                                                                                                                           
+
+
+top - 19:09:12 up 2 days, 21:09,  2 users,  load average: 0.19, 0.28, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 25.3%us,  4.8%sy,  1.6%ni, 67.3%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797916k used,    30776k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418188k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  8.0  8.2   0:39.91 lcrail                                                                                                                                                                           
+
+
+top - 19:09:15 up 2 days, 21:09,  2 users,  load average: 0.19, 0.28, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 21.2%us,  5.7%sy,  1.0%ni, 70.4%id,  1.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797880k used,    30812k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418164k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  8.0  8.2   0:40.15 lcrail                                                                                                                                                                           
+
+
+top - 19:09:18 up 2 days, 21:09,  2 users,  load average: 0.26, 0.29, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.7%us,  3.8%sy,  2.1%ni, 80.5%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797716k used,    30976k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418172k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:40.20 lcrail                                                                                                                                                                           
+
+
+top - 19:09:21 up 2 days, 21:09,  2 users,  load average: 0.26, 0.29, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.3%us,  5.9%sy,  2.3%ni, 70.9%id,  3.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   797892k used,    30800k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418288k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  7.6  8.2   0:40.43 lcrail                                                                                                                                                                           
+
+
+top - 19:09:24 up 2 days, 21:09,  2 users,  load average: 0.24, 0.29, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.8%us,  5.3%sy,  1.6%ni, 75.3%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797952k used,    30740k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418292k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.3  8.2   0:40.62 lcrail                                                                                                                                                                           
+
+
+top - 19:09:27 up 2 days, 21:09,  2 users,  load average: 0.22, 0.28, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.6%us,  4.2%sy,  2.0%ni, 75.6%id,  1.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   797928k used,    30764k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418300k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.3  8.2   0:40.78 lcrail                                                                                                                                                                           
+
+
+top - 19:09:30 up 2 days, 21:09,  2 users,  load average: 0.22, 0.28, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.2%us,  5.5%sy,  2.1%ni, 71.5%id,  1.4%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798144k used,    30548k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418308k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.3  8.2   0:40.97 lcrail                                                                                                                                                                           
+
+
+top - 19:09:33 up 2 days, 21:09,  2 users,  load average: 0.28, 0.29, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.6%us,  2.4%sy,  2.4%ni, 78.6%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797928k used,    30764k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418312k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:41.02 lcrail                                                                                                                                                                           
+
+
+top - 19:09:36 up 2 days, 21:09,  2 users,  load average: 0.28, 0.29, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 22.6%us, 10.3%sy,  2.4%ni, 59.2%id,  5.5%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798132k used,    30560k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418360k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  9.0  8.2   0:41.29 lcrail                                                                                                                                                                           
+
+
+top - 19:09:39 up 2 days, 21:09,  2 users,  load average: 0.26, 0.29, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.2%us,  4.1%sy,  2.4%ni, 76.4%id,  0.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798456k used,    30236k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418568k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:41.34 lcrail                                                                                                                                                                           
+
+
+top - 19:09:42 up 2 days, 21:09,  2 users,  load average: 0.24, 0.28, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.5%us,  4.0%sy,  2.0%ni, 73.2%id,  0.7%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   798544k used,    30148k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418624k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.3  8.2   0:41.53 lcrail                                                                                                                                                                           
+
+
+top - 19:09:45 up 2 days, 21:09,  2 users,  load average: 0.24, 0.28, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.8%us,  5.7%sy,  1.9%ni, 74.9%id,  0.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798516k used,    30176k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418588k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.0  8.2   0:41.71 lcrail                                                                                                                                                                           
+
+
+top - 19:09:48 up 2 days, 21:09,  2 users,  load average: 0.30, 0.30, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.0%us,  4.9%sy,  2.0%ni, 72.9%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798672k used,    30020k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418604k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:41.88 lcrail                                                                                                                                                                           
+
+
+top - 19:09:51 up 2 days, 21:09,  2 users,  load average: 0.30, 0.30, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.5%us,  4.9%sy,  2.3%ni, 70.8%id,  4.2%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798720k used,    29972k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418728k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.3  8.2   0:42.04 lcrail                                                                                                                                                                           
+
+
+top - 19:09:54 up 2 days, 21:09,  2 users,  load average: 0.27, 0.29, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.7%us,  5.4%sy,  4.4%ni, 69.7%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798452k used,    30240k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418736k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:42.21 lcrail                                                                                                                                                                           
+
+
+top - 19:09:57 up 2 days, 21:10,  2 users,  load average: 0.25, 0.29, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.1%us,  4.8%sy,  2.4%ni, 74.7%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798280k used,    30412k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418748k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  4.7  8.2   0:42.35 lcrail                                                                                                                                                                           
+
+
+top - 19:10:00 up 2 days, 21:10,  2 users,  load average: 0.25, 0.29, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.7%us,  3.2%sy,  2.6%ni, 75.2%id,  1.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798892k used,    29800k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418860k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.0  8.2   0:42.53 lcrail                                                                                                                                                                           
+
+
+top - 19:10:03 up 2 days, 21:10,  2 users,  load average: 0.23, 0.28, 0.49
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.5%us,  2.9%sy,  1.9%ni, 79.7%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798808k used,    29884k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418856k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:42.58 lcrail                                                                                                                                                                           
+
+
+top - 19:10:06 up 2 days, 21:10,  2 users,  load average: 0.23, 0.28, 0.49
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 24.0%us,  7.9%sy,  1.7%ni, 64.0%id,  2.1%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798840k used,    29852k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418904k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  8.6  8.2   0:42.84 lcrail                                                                                                                                                                           
+
+
+top - 19:10:09 up 2 days, 21:10,  2 users,  load average: 0.45, 0.33, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.6%us,  5.5%sy,  1.7%ni, 72.5%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798984k used,    29708k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419088k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.0  8.2   0:43.02 lcrail                                                                                                                                                                           
+
+
+top - 19:10:12 up 2 days, 21:10,  2 users,  load average: 0.42, 0.32, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.8%us,  3.4%sy,  2.4%ni, 78.3%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799016k used,    29676k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419104k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.0  8.2   0:43.08 lcrail                                                                                                                                                                           
+
+
+top - 19:10:15 up 2 days, 21:10,  2 users,  load average: 0.42, 0.32, 0.50
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.7%us,  5.5%sy,  2.1%ni, 70.3%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   799136k used,    29556k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419064k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m R  7.3  8.2   0:43.30 lcrail                                                                                                                                                                           
+
+
+top - 19:10:18 up 2 days, 21:10,  2 users,  load average: 0.70, 0.38, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 22.9%us,  5.2%sy,  2.4%ni, 67.4%id,  1.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798760k used,    29932k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419072k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  8.7  8.2   0:43.56 lcrail                                                                                                                                                                           
+
+
+top - 19:10:21 up 2 days, 21:10,  2 users,  load average: 0.70, 0.38, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.8%us,  4.6%sy,  2.5%ni, 66.3%id, 10.9%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799092k used,    29600k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419192k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.0  8.2   0:43.62 lcrail                                                                                                                                                                           
+
+
+top - 19:10:24 up 2 days, 21:10,  2 users,  load average: 0.81, 0.41, 0.53
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.3%us,  6.9%sy,  1.3%ni, 69.6%id,  1.3%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   799172k used,    29520k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419200k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m R  8.6  8.2   0:43.88 lcrail                                                                                                                                                                           
+
+
+top - 19:10:27 up 2 days, 21:10,  2 users,  load average: 0.74, 0.40, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 21.5%us,  5.9%sy,  1.7%ni, 68.4%id,  1.7%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   799348k used,    29344k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419216k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  8.0  8.2   0:44.12 lcrail                                                                                                                                                                           
+
+
+top - 19:10:30 up 2 days, 21:10,  2 users,  load average: 0.74, 0.40, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.7%us,  3.4%sy,  2.0%ni, 77.1%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798940k used,    29752k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419224k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:44.17 lcrail                                                                                                                                                                           
+
+
+top - 19:10:33 up 2 days, 21:10,  2 users,  load average: 0.76, 0.41, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.9%us,  6.7%sy,  1.6%ni, 70.5%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   799192k used,    29500k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419228k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S 10.0  8.2   0:44.47 lcrail                                                                                                                                                                           
+
+
+top - 19:10:36 up 2 days, 21:10,  2 users,  load average: 0.76, 0.41, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.1%us,  7.2%sy,  3.6%ni, 67.1%id,  3.6%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   799100k used,    29592k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419260k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.7  8.2   0:44.64 lcrail                                                                                                                                                                           
+
+
+top - 19:10:39 up 2 days, 21:10,  2 users,  load average: 0.70, 0.41, 0.53
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.7%us,  2.4%sy,  1.4%ni, 73.5%id,  2.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799460k used,    29232k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   419468k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  4.7  8.2   0:44.78 lcrail                                                                                                                                                                           
+
+
+top - 19:10:43 up 2 days, 21:10,  2 users,  load average: 0.65, 0.40, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.1%us,  4.2%sy,  2.9%ni, 73.1%id,  0.6%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797716k used,    30976k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417556k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.3  8.2   0:44.94 lcrail                                                                                                                                                                           
+
+
+top - 19:10:46 up 2 days, 21:10,  2 users,  load average: 0.65, 0.40, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 23.6%us,  8.4%sy,  1.0%ni, 64.3%id,  1.7%wa,  0.0%hi,  1.0%si,  0.0%st
+Mem:    828692k total,   797716k used,    30976k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417576k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  9.3  8.2   0:45.22 lcrail                                                                                                                                                                           
+
+
+top - 19:10:49 up 2 days, 21:10,  2 users,  load average: 0.59, 0.39, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.4%us,  5.9%sy,  1.0%ni, 73.8%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797512k used,    31180k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417596k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:45.39 lcrail                                                                                                                                                                           
+
+
+top - 19:10:52 up 2 days, 21:10,  2 users,  load average: 0.59, 0.39, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.3%us,  9.5%sy,  1.4%ni, 65.9%id,  4.1%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797720k used,    30972k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417716k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.3  8.2   0:45.55 lcrail                                                                                                                                                                           
+
+
+top - 19:10:55 up 2 days, 21:10,  2 users,  load average: 0.55, 0.39, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.3%us,  4.7%sy,  1.7%ni, 73.3%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797500k used,    31192k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417736k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:45.72 lcrail                                                                                                                                                                           
+
+
+top - 19:10:58 up 2 days, 21:11,  2 users,  load average: 0.50, 0.38, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 22.3%us,  4.1%sy,  2.4%ni, 70.5%id,  0.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   797568k used,    31124k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417740k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.3  8.2   0:45.91 lcrail                                                                                                                                                                           
+
+
+top - 19:11:01 up 2 days, 21:11,  2 users,  load average: 0.50, 0.38, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.3%us,  3.5%sy,  2.3%ni, 74.3%id,  0.6%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798164k used,    30528k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417760k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.0  8.2   0:46.09 lcrail                                                                                                                                                                           
+
+
+top - 19:11:04 up 2 days, 21:11,  2 users,  load average: 0.46, 0.37, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.1%us,  5.8%sy,  1.7%ni, 71.4%id,  0.3%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   797764k used,    30928k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417772k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.0  8.2   0:46.27 lcrail                                                                                                                                                                           
+
+
+top - 19:11:07 up 2 days, 21:11,  2 users,  load average: 0.46, 0.37, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.2%us,  7.5%sy,  2.4%ni, 69.2%id,  1.0%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   797584k used,    31108k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417788k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:46.44 lcrail                                                                                                                                                                           
+
+
+top - 19:11:10 up 2 days, 21:11,  2 users,  load average: 0.43, 0.37, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.7%us,  7.7%sy,  2.0%ni, 69.2%id,  2.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798068k used,    30624k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417984k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:46.61 lcrail                                                                                                                                                                           
+
+
+top - 19:11:13 up 2 days, 21:11,  2 users,  load average: 0.47, 0.38, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.7%us,  4.8%sy,  1.7%ni, 72.7%id,  0.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798028k used,    30664k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417920k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:46.78 lcrail                                                                                                                                                                           
+
+
+top - 19:11:16 up 2 days, 21:11,  2 users,  load average: 0.47, 0.38, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 21.8%us,  6.5%sy,  1.4%ni, 69.4%id,  0.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   797964k used,    30728k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417932k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.0  8.2   0:46.96 lcrail                                                                                                                                                                           
+
+
+top - 19:11:19 up 2 days, 21:11,  2 users,  load average: 0.51, 0.39, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 22.4%us,  8.0%sy,  2.0%ni, 65.9%id,  1.3%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798392k used,    30300k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417940k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S 10.6  8.2   0:47.28 lcrail                                                                                                                                                                           
+
+
+top - 19:11:22 up 2 days, 21:11,  2 users,  load average: 0.51, 0.39, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.4%us,  6.4%sy,  3.0%ni, 69.9%id,  1.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798544k used,    30148k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418088k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.0  8.2   0:47.43 lcrail                                                                                                                                                                           
+
+
+top - 19:11:25 up 2 days, 21:11,  2 users,  load average: 0.47, 0.38, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.6%us,  4.4%sy,  2.7%ni, 73.3%id,  0.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798596k used,    30096k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418104k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.3  8.2   0:47.62 lcrail                                                                                                                                                                           
+
+
+top - 19:11:28 up 2 days, 21:11,  2 users,  load average: 0.52, 0.39, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 24.9%us,  5.6%sy,  1.7%ni, 66.8%id,  0.3%wa,  0.0%hi,  0.7%si,  0.0%st
+Mem:    828692k total,   798568k used,    30124k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418124k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  9.0  8.2   0:47.89 lcrail                                                                                                                                                                           
+
+
+top - 19:11:31 up 2 days, 21:11,  2 users,  load average: 0.52, 0.39, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.1%us,  6.2%sy,  1.3%ni, 73.0%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798676k used,    30016k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418160k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.3  8.2   0:48.05 lcrail                                                                                                                                                                           
+
+
+top - 19:11:34 up 2 days, 21:11,  2 users,  load average: 0.55, 0.40, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.9%us,  5.5%sy,  2.4%ni, 70.5%id,  1.4%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798536k used,    30156k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418168k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  6.0  8.2   0:48.23 lcrail                                                                                                                                                                           
+
+
+top - 19:11:37 up 2 days, 21:11,  2 users,  load average: 0.55, 0.40, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 21.8%us,  7.5%sy,  1.9%ni, 64.6%id,  3.9%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798772k used,    29920k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418228k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S 10.3  8.2   0:48.54 lcrail                                                                                                                                                                           
+
+
+top - 19:11:40 up 2 days, 21:11,  2 users,  load average: 0.51, 0.39, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 23.5%us,  4.8%sy,  1.3%ni, 67.6%id,  2.2%wa,  0.0%hi,  0.6%si,  0.0%st
+Mem:    828692k total,   799356k used,    29336k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418616k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  9.3  8.2   0:48.82 lcrail                                                                                                                                                                           
+
+
+top - 19:11:43 up 2 days, 21:11,  2 users,  load average: 0.47, 0.39, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 21.0%us,  3.5%sy,  0.6%ni, 73.5%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798880k used,    29812k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418552k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.7  8.2   0:48.99 lcrail                                                                                                                                                                           
+
+
+top - 19:11:46 up 2 days, 21:11,  2 users,  load average: 0.47, 0.39, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 29.2%us,  6.5%sy,  1.7%ni, 58.8%id,  2.1%wa,  0.0%hi,  1.7%si,  0.0%st
+Mem:    828692k total,   799232k used,    29460k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418636k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S 13.6  8.2   0:49.40 lcrail                                                                                                                                                                           
+
+
+top - 19:11:49 up 2 days, 21:11,  2 users,  load average: 0.67, 0.43, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.3%us,  4.3%sy,  2.3%ni, 73.8%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798952k used,    29740k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418740k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  5.6  8.2   0:49.57 lcrail                                                                                                                                                                           
+
+
+top - 19:11:52 up 2 days, 21:11,  2 users,  load average: 0.67, 0.43, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.7%us,  6.1%sy,  2.4%ni, 74.1%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799308k used,    29384k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418828k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:49.62 lcrail                                                                                                                                                                           
+
+
+top - 19:11:55 up 2 days, 21:11,  2 users,  load average: 0.62, 0.42, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.1%us,  4.7%sy,  2.3%ni, 75.6%id,  1.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799640k used,    29052k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418832k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.0  8.2   0:49.68 lcrail                                                                                                                                                                           
+
+
+top - 19:11:58 up 2 days, 21:12,  2 users,  load average: 0.57, 0.42, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.4%us,  3.8%sy,  2.4%ni, 76.4%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799480k used,    29212k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418836k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.0  8.2   0:49.74 lcrail                                                                                                                                                                           
+
+
+top - 19:12:01 up 2 days, 21:12,  2 users,  load average: 0.57, 0.42, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.7%us,  4.8%sy,  2.0%ni, 77.5%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799440k used,    29252k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418844k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.0  8.2   0:49.80 lcrail                                                                                                                                                                           
+
+
+top - 19:12:04 up 2 days, 21:12,  2 users,  load average: 0.52, 0.41, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.3%us,  4.9%sy,  1.6%ni, 76.1%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799732k used,    28960k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418844k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:49.85 lcrail                                                                                                                                                                           
+
+
+top - 19:12:07 up 2 days, 21:12,  2 users,  load average: 0.52, 0.41, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.6%us,  6.6%sy,  2.7%ni, 75.1%id,  0.7%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   797548k used,    31144k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416588k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.3  8.2   0:49.92 lcrail                                                                                                                                                                           
+
+
+top - 19:12:10 up 2 days, 21:12,  2 users,  load average: 0.64, 0.44, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.3%us,  5.8%sy,  2.4%ni, 72.8%id,  1.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797368k used,    31324k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416856k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.0  8.2   0:49.98 lcrail                                                                                                                                                                           
+
+
+top - 19:12:13 up 2 days, 21:12,  2 users,  load average: 0.59, 0.43, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.4%us,  2.0%sy,  1.7%ni, 77.1%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797584k used,    31108k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416772k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:50.03 lcrail                                                                                                                                                                           
+
+
+top - 19:12:16 up 2 days, 21:12,  2 users,  load average: 0.59, 0.43, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.8%us,  3.1%sy,  2.1%ni, 77.7%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797484k used,    31208k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416768k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.0  8.2   0:50.09 lcrail                                                                                                                                                                           
+
+
+top - 19:12:19 up 2 days, 21:12,  2 users,  load average: 0.62, 0.44, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 24.0%us,  4.4%sy,  0.9%ni, 69.9%id,  0.9%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797388k used,    31304k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416800k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S 13.0  8.2   0:50.48 lcrail                                                                                                                                                                           
+
+
+top - 19:12:22 up 2 days, 21:12,  2 users,  load average: 0.62, 0.44, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.2%us,  5.2%sy,  2.8%ni, 75.9%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797588k used,    31104k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416920k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.3  8.2   0:50.52 lcrail                                                                                                                                                                           
+
+
+top - 19:12:25 up 2 days, 21:12,  2 users,  load average: 0.57, 0.43, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.2%us,  3.6%sy,  2.0%ni, 78.5%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797948k used,    30744k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416928k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.3  8.2   0:50.56 lcrail                                                                                                                                                                           
+
+
+top - 19:12:28 up 2 days, 21:12,  2 users,  load average: 0.53, 0.42, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.9%us,  4.1%sy,  2.4%ni, 74.8%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797904k used,    30788k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416932k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  2.3  8.2   0:50.63 lcrail                                                                                                                                                                           
+
+
+top - 19:12:31 up 2 days, 21:12,  2 users,  load average: 0.53, 0.42, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.9%us,  3.4%sy,  1.4%ni, 78.6%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797496k used,    31196k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416932k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.3  8.2   0:50.67 lcrail                                                                                                                                                                           
+
+
+top - 19:12:34 up 2 days, 21:12,  2 users,  load average: 0.48, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.9%us,  3.1%sy,  2.1%ni, 78.6%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797704k used,    30988k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416932k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:50.72 lcrail                                                                                                                                                                           
+
+
+top - 19:12:37 up 2 days, 21:12,  2 users,  load average: 0.48, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.3%us,  4.3%sy,  2.3%ni, 75.4%id,  2.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797284k used,    31408k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   416980k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.2   0:50.77 lcrail                                                                                                                                                                           
+
+
+top - 19:12:40 up 2 days, 21:12,  2 users,  load average: 0.45, 0.41, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.2%us,  5.0%sy,  0.9%ni, 73.4%id,  1.2%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   798140k used,    30552k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417376k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  4.0  8.2   0:50.89 lcrail                                                                                                                                                                           
+
+
+top - 19:12:43 up 2 days, 21:12,  2 users,  load average: 0.41, 0.40, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.8%us,  2.0%sy,  2.3%ni, 78.2%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797892k used,    30800k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417284k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.3   0:50.94 lcrail                                                                                                                                                                           
+
+
+top - 19:12:46 up 2 days, 21:12,  2 users,  load average: 0.41, 0.40, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.7%us,  2.3%sy,  2.6%ni, 78.0%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797816k used,    30876k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417288k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.3  8.3   0:50.98 lcrail                                                                                                                                                                           
+
+
+top - 19:12:49 up 2 days, 21:12,  2 users,  load average: 0.38, 0.40, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 14.7%us,  3.3%sy,  2.0%ni, 79.0%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797860k used,    30832k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417288k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.3   0:51.03 lcrail                                                                                                                                                                           
+
+
+top - 19:12:52 up 2 days, 21:12,  2 users,  load average: 0.38, 0.40, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.9%us,  6.4%sy,  1.4%ni, 73.3%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798328k used,    30364k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417452k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.3  8.3   0:51.07 lcrail                                                                                                                                                                           
+
+
+top - 19:12:55 up 2 days, 21:12,  2 users,  load average: 0.35, 0.39, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.6%us,  4.1%sy,  2.0%ni, 76.7%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798272k used,    30420k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417460k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  160m  66m  28m S  1.7  8.3   0:51.12 lcrail                                                                                                                                                                           
+
+
+top - 19:12:58 up 2 days, 21:13,  2 users,  load average: 0.40, 0.40, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 22.6%us,  6.2%sy,  2.1%ni, 68.5%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798772k used,    29920k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417464k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  7.0  8.3   0:51.33 lcrail                                                                                                                                                                           
+
+
+top - 19:13:01 up 2 days, 21:13,  2 users,  load average: 0.40, 0.40, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 20.9%us,  7.1%sy,  2.4%ni, 67.9%id,  1.4%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   799356k used,    29336k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417472k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  8.0  8.3   0:51.57 lcrail                                                                                                                                                                           
+
+
+top - 19:13:04 up 2 days, 21:13,  2 users,  load average: 0.45, 0.41, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.8%us,  4.1%sy,  1.7%ni, 76.6%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   798572k used,    30120k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417476k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  1.7  8.3   0:51.62 lcrail                                                                                                                                                                           
+
+
+top - 19:13:07 up 2 days, 21:13,  2 users,  load average: 0.45, 0.41, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.2%us,  4.7%sy,  3.7%ni, 73.6%id,  1.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799096k used,    29596k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417504k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  1.7  8.3   0:51.67 lcrail                                                                                                                                                                           
+
+
+top - 19:13:10 up 2 days, 21:13,  2 users,  load average: 0.49, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.6%us,  5.8%sy,  1.4%ni, 75.3%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799056k used,    29636k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417784k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  2.0  8.3   0:51.73 lcrail                                                                                                                                                                           
+
+
+top - 19:13:13 up 2 days, 21:13,  2 users,  load average: 0.45, 0.41, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 19.6%us,  4.3%sy,  1.4%ni, 74.4%id,  0.4%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799272k used,    29420k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417696k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  5.7  8.3   0:51.90 lcrail                                                                                                                                                                           
+
+
+top - 19:13:16 up 2 days, 21:13,  2 users,  load average: 0.45, 0.41, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.2%us,  4.1%sy,  2.7%ni, 75.3%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799184k used,    29508k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417696k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  2.0  8.3   0:51.96 lcrail                                                                                                                                                                           
+
+
+top - 19:13:19 up 2 days, 21:13,  2 users,  load average: 0.50, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.5%us,  4.1%sy,  2.4%ni, 77.3%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799524k used,    29168k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417700k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  1.7  8.3   0:52.01 lcrail                                                                                                                                                                           
+
+
+top - 19:13:22 up 2 days, 21:13,  2 users,  load average: 0.50, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.5%us,  4.0%sy,  2.6%ni, 72.9%id,  5.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799740k used,    28952k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417828k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  1.7  8.3   0:52.06 lcrail                                                                                                                                                                           
+
+
+top - 19:13:25 up 2 days, 21:13,  2 users,  load average: 0.46, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.5%us,  4.1%sy,  1.4%ni, 78.3%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799456k used,    29236k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417832k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  2.0  8.3   0:52.12 lcrail                                                                                                                                                                           
+
+
+top - 19:13:28 up 2 days, 21:13,  2 users,  load average: 0.42, 0.41, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.5%us,  3.1%sy,  2.4%ni, 77.3%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799796k used,    28896k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417828k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  1.7  8.3   0:52.17 lcrail                                                                                                                                                                           
+
+
+top - 19:13:31 up 2 days, 21:13,  2 users,  load average: 0.42, 0.41, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.6%us,  3.4%sy,  2.0%ni, 77.3%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799200k used,    29492k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417832k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  2.0  8.3   0:52.23 lcrail                                                                                                                                                                           
+
+
+top - 19:13:34 up 2 days, 21:13,  2 users,  load average: 0.47, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 15.6%us,  3.5%sy,  2.8%ni, 77.2%id,  1.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799404k used,    29288k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417832k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  1.7  8.3   0:52.28 lcrail                                                                                                                                                                           
+
+
+top - 19:13:37 up 2 days, 21:13,  2 users,  load average: 0.47, 0.42, 0.51
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 16.0%us,  5.8%sy,  2.0%ni, 74.8%id,  1.0%wa,  0.0%hi,  0.3%si,  0.0%st
+Mem:    828692k total,   799612k used,    29080k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417840k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  2.0  8.3   0:52.34 lcrail                                                                                                                                                                           
+
+
+top - 19:13:40 up 2 days, 21:13,  2 users,  load average: 0.43, 0.41, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 18.0%us,  3.1%sy,  1.4%ni, 75.8%id,  1.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799516k used,    29176k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   418036k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  2.0  8.3   0:52.40 lcrail                                                                                                                                                                           
+
+
+top - 19:13:43 up 2 days, 21:13,  2 users,  load average: 0.39, 0.41, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 17.1%us,  3.5%sy,  1.7%ni, 77.3%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799356k used,    29336k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417920k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  3.7  8.3   0:52.51 lcrail                                                                                                                                                                           
+
+
+top - 19:13:46 up 2 days, 21:13,  2 users,  load average: 0.39, 0.41, 0.50
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 23.3%us,  5.1%sy,  2.1%ni, 69.2%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   799708k used,    28984k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   417936k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  7.6  8.3   0:52.74 lcrail                                                                                                                                                                           
+
+
+top - 19:13:49 up 2 days, 21:13,  2 users,  load average: 0.68, 0.47, 0.52
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+Cpu(s): 22.8%us,  3.0%sy,  4.3%ni, 69.5%id,  0.3%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:    828692k total,   797136k used,    31556k free,     6240k buffers
+Swap:   627908k total,     5624k used,   622284k free,   415272k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                          
+28813 nemo      20   0  161m  67m  28m S  7.0  8.3   0:52.95 lcrail  
