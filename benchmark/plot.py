@@ -1,4 +1,5 @@
 #!/bin/python
+import argparse
 import matplotlib.pyplot as plt
 from datetime import datetime
 
@@ -99,33 +100,15 @@ class UserInformedTimeParser(BaseParser):
             try:
                 if "$" in line:
                     _, name, timestamp = line.split(",")
-                    day, month, date, time, year, timezone = timestamp.split()
+                    print(timestamp)
                     if "liveboard" in name:
-                        self._liveboard_timestamps.append(datetime.strptime(time, "%H:%M:%S").timestamp())
-                    elif "planner" in name:
-                        self._planner_timestamps.append(datetime.strptime(time, "%H:%M:%S").timestamp())
+                        self._liveboard.append(abs(int(timestamp)))
+                    elif "router" in name:
+                        self._planner.append(abs(int(timestamp)))
                     else:
                         raise NotImplementedError("Unknown benchmark name")
             except Exception as e:
                 print("ERROR: {} for parsing line: {}".format(e, line))
-        self.convert_liveboard()
-        self.convert_planner()
-
-    def convert_liveboard(self):
-        # Liveboard starts with a timestamp and ends with a timestamp, both are always in pairs
-        for l in range(0, len(self._liveboard_timestamps), 2):
-            liveboard_requested = self._liveboard_timestamps[l]
-            liveboard_processed = self._liveboard_timestamps[l + 1]
-            self._liveboard.append(liveboard_processed - liveboard_requested)
-        print("Liveboard lines: {}".format(len(self._liveboard)))
-
-    def convert_planner(self):
-        # Planner starts with a timestamp and ends with a timestamp, both are always in pairs
-        for l in range(0, len(self._planner_timestamps), 2):
-            planner_requested = self._planner_timestamps[l]
-            planner_processed = self._planner_timestamps[l + 1]
-            self._planner.append(planner_processed - planner_requested)
-        print("Planner lines: {}".format(len(self._planner)))
 
     @property
     def liveboard(self):
@@ -137,16 +120,31 @@ class UserInformedTimeParser(BaseParser):
 
 
 if __name__ == "__main__":
+    # Parse arguments
+    parser = argparse.ArgumentParser(description="LCRail benchmark.")
+    parser.add_argument("name",
+                        type=str,
+                        help="The name of the benchmark file, for example: <process>-top-<name>.txt")
+    parser.add_argument("process",
+                        type=str,
+                        help="The name of the benchmarked process , for example: <process>-top-<name>.txt")
+    args = parser.parse_args()
+    process = args.process
+    name = args.name
+    print("Process: {}".format(process))
+    print("Name: {}".format(name))
+
+
     # Parse Nethogs
-    nethogs = NethogsParser("lcrail-nethogs-original3.txt", "lcrail")
+    nethogs = NethogsParser("{}-nethogs-{}.txt".format(process, name), process)
     nethogs.parse()
 
     # Parse Top
-    top = TopParser("lcrail-top-original3.txt", "lcrail")
+    top = TopParser("{}-top-{}.txt".format(process, name), process)
     top.parse()
 
     # Parse User Informed Time
-    user_informed_time = UserInformedTimeParser("lcrail-userinformedtime-original3.txt")
+    user_informed_time = UserInformedTimeParser("{}-{}.txt".format(process, name))
     user_informed_time.parse()
 
     # CPU usage
@@ -185,14 +183,16 @@ if __name__ == "__main__":
 
     # Liveboard refresh time
     plt.title("Liveboard refresh time")
-    plt.ylabel("Time (s)")
+    plt.ylabel("Time (ms)")
     plt.xlabel("Measurement")
-    plt.boxplot(user_informed_time.liveboard)
+    #plt.boxplot(user_informed_time.liveboard)
+    plt.bar(range(0, len(user_informed_time.liveboard)), user_informed_time.liveboard)
     plt.show()
 
     # Planner refresh time
     plt.title("Planner refresh time")
-    plt.ylabel("Time (s)")
+    plt.ylabel("Time (ms)")
     plt.xlabel("Measurement")
-    plt.boxplot(user_informed_time.planner)
+    plt.bar(range(0, len(user_informed_time.planner)), user_informed_time.planner)
+    #plt.boxplot(user_informed_time.planner)
     plt.show()
