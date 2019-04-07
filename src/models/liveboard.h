@@ -74,6 +74,9 @@ public:
                               const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
     Q_INVOKABLE void getBoard(const QUrl &uri,
                               const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
+    Q_INVOKABLE void getBoard(const QUrl &uri,
+                              const QDateTime departureTime,
+                              const QRail::LiveboardEngine::Board::Mode &mode = QRail::LiveboardEngine::Board::Mode::DEPARTURES);
 
     Q_INVOKABLE void clearBoard();
     Q_INVOKABLE void loadNext(); // fetchMore is only usuable for synced operations

@@ -24,7 +24,7 @@ import "../js/utils.js" as Utils
 Page {
     property string from
     property string to
-    property date departureTime: new Date()
+    //property date departureTime: new Date()
     property int maxTransfers: 4
 
     property date _before
@@ -44,10 +44,27 @@ Page {
         console.log("Fetching connections")
         _before = new Date();
         if(from.length > 0 && to.length > 0) {
+            var departureTime = new Date();
+            departureTime.setFullYear(2019); // Reproduction data 31/03/2019
+            departureTime.setMonth(2);
+            departureTime.setDate(31);
+            departureTime.setHours(14); // 14:00:00.000Z
+            departureTime.setMinutes(0);
+            departureTime.setSeconds(0);
+            departureTime.setMilliseconds(0);
             router.getConnections(from, to, departureTime, maxTransfers);
         }
         else {
             console.error("From and To stations not found");
+        }
+    }
+
+    Timer {
+        id: refreshTimer
+        interval: 30 * 1000
+        onTriggered: {
+            console.debug("Refreshing routes...")
+            getData()
         }
     }
 
@@ -78,7 +95,9 @@ Page {
                     onBusyChanged: {
                         if(!busy) {
                             _after = new Date();
+                            console.warn("$,router," + (_after.getTime() - _before.getTime()));
                             header.description = _after.getTime() - _before.getTime() + " ms";
+                            refreshTimer.restart();
                         }
                     }
                     onProcessing: header.description = timestamp.toLocaleString(Qt.locale(), "HH:mm dd/MM/yyyy")

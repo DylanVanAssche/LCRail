@@ -44,7 +44,16 @@ Page {
             header.title = "Loading ...";
             liveboard.abortCurrentOperation();
             liveboard.clearBoard();
-            liveboard.getBoard(_stationURI);
+            var departureTime = new Date();
+            departureTime.setFullYear(2019); // Reproduction data 31/03/2019
+            departureTime.setMonth(2);
+            departureTime.setDate(31);
+            departureTime.setHours(14); // 14:00:00.000Z
+            departureTime.setMinutes(0);
+            departureTime.setSeconds(0);
+            departureTime.setMilliseconds(0);
+            console.debug("Fetching liveboard of:" + departureTime.toISOString());
+            liveboard.getBoard(_stationURI, departureTime);
         }
     }
 
@@ -62,6 +71,15 @@ Page {
                 _stationName = name
                 // Page is automatically updated due statusChanged
             });
+        }
+    }
+
+    Timer {
+        id: refreshTimer
+        interval: 30 * 1000
+        onTriggered: {
+            console.debug("Refreshing liveboard...")
+            getData();
         }
     }
 
@@ -99,7 +117,9 @@ Page {
                 if(!busy) {
                     _after = new Date();
                     header.benchmark = _after.getTime() - _before.getTime() + " ms";
+                    console.warn("$,liveboard," + (_after.getTime() - _before.getTime()));
                     header.title = _stationName;
+                    refreshTimer.restart()
                 }
                 else {
                     _before = new Date();
