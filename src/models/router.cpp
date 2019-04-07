@@ -62,9 +62,11 @@ QVariant Router::data(const QModelIndex &index, int role) const
         return QVariant();
     }
     // Break not needed since return makes the rest unreachable.
+    QSharedPointer<Trip> trip; // http://www.cplusplus.com/forum/beginner/48287/
     switch (role) {
     case tripRole:
-        return QVariant::fromValue(new Trip(m_routes.at(index.row())->transfers()));
+        trip = QSharedPointer<Trip>(new Trip(m_routes.at(index.row())->transfers()), &QObject::deleteLater);
+        return QVariant::fromValue(trip);
     default:
         return QVariant();
     }

@@ -27,6 +27,7 @@
 #include <QtCore/QList>
 #include <QtCore/QHash>
 #include <QtCore/QByteArray>
+#include <QtCore/QSharedPointer>
 
 #include "engines/router/routerplanner.h"
 #include "engines/router/routerroute.h"
