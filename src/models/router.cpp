@@ -38,6 +38,7 @@ Router::Router(QObject *parent) : QAbstractListModel(parent)
             SIGNAL(processing(QUrl)),
             this,
             SLOT(handleProcessing(QUrl)));
+    connect(m_planner, SIGNAL(updateReceived(qint64)), this, SLOT(updateReceived(qint64)));
 
     // Init variables
     m_routes = QList<QRail::RouterEngine::Route *>();
@@ -62,9 +63,11 @@ QVariant Router::data(const QModelIndex &index, int role) const
         return QVariant();
     }
     // Break not needed since return makes the rest unreachable.
+    QSharedPointer<Trip> trip; // http://www.cplusplus.com/forum/beginner/48287/
     switch (role) {
     case tripRole:
-        return QVariant::fromValue(new Trip(m_routes.at(index.row())->transfers()));
+        trip = QSharedPointer<Trip>(new Trip(m_routes.at(index.row())->transfers()), &QObject::deleteLater);
+        return QVariant::fromValue(trip);
     default:
         return QVariant();
     }
@@ -77,7 +80,9 @@ void Router::getConnections(const QString &departureStation,
 {
     if (!this->isBusy()) {
         this->setBusy(true);
+        m_before = QDateTime::currentMSecsSinceEpoch();
         this->clearRoutes();
+        qDebug() << "DEPARTURE TIME ROUTER:" << departureTime.toUTC();
         m_planner->getConnections(QUrl(departureStation),
                                   QUrl(arrivalStation),
                                   departureTime.toUTC(),
@@ -104,6 +109,7 @@ void Router::abortCurrentOperation()
 
 void Router::handleStream(QRail::RouterEngine::Route *route)
 {
+    qDebug() << "***************** CSA STREAM ********************";
     qDebug() << "Inserting:" << route->departureTime() << "|" << route->arrivalTime();
     this->setBusy(true);
 
@@ -111,15 +117,34 @@ void Router::handleStream(QRail::RouterEngine::Route *route)
     for (qint16 i = 0; i < m_routes.length(); i++) {
         QDateTime entryDepartureTime = m_routes.at(i)->departureTime();
 
-        qDebug() << "CHECK ROUTE:"
-                 << "DEPARTURE:" << m_routes.at(i)->departureTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->departureDelay() << "vs" << route->departureTime().toString(Qt::ISODate) << "+" << route->departureDelay()
-                 << "ARRIVAL:" << m_routes.at(i)->arrivalTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->arrivalDelay() << "vs" << route->arrivalTime().toString(Qt::ISODate) << "+" << route->arrivalDelay();
-
         // Remove duplicates (updates)
         if((m_routes.at(i)->departureTime().addSecs(-m_routes.at(i)->departureDelay()) == route->departureTime().addSecs(-route->departureDelay()))
             && (m_routes.at(i)->arrivalTime().addSecs(-m_routes.at(i)->arrivalDelay()) == route->arrivalTime().addSecs(-route->arrivalDelay()))) {
             qDebug() << "FOUND ROUTE! CHECKING DELAYS";
+            qDebug() << "CHECK ROUTE:"
+                     << "DEPARTURE:" << m_routes.at(i)->departureTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->departureDelay() << "vs" << route->departureTime().toString(Qt::ISODate) << "+" << route->departureDelay()
+                     << "ARRIVAL:" << m_routes.at(i)->arrivalTime().toString(Qt::ISODate) << "+" << m_routes.at(i)->arrivalDelay() << "vs" << route->arrivalTime().toString(Qt::ISODate) << "+" << route->arrivalDelay();
 
+            foreach(QRail::RouterEngine::Transfer *transfer, route->transfers()) {
+                if (transfer->type() == QRail::RouterEngine::Transfer::Type::TRANSFER) {
+                    qDebug() << "TRANSFER:"
+                             << "Changing vehicle at"
+                             << transfer->time().time().toString("hh:mm")
+                             << transfer->station()->name().value(QLocale::Language::Dutch)
+                             << transfer->arrivalLeg()->vehicleInformation()->uri()
+                             << transfer->departureLeg()->vehicleInformation()->uri();
+                } else if (transfer->type() == QRail::RouterEngine::Transfer::Type::DEPARTURE) {
+                    qDebug() << "DEPARTURE:"
+                             << transfer->time().time().toString("hh:mm")
+                             << transfer->station()->name().value(QLocale::Language::Dutch)
+                             << transfer->departureLeg()->vehicleInformation()->uri();
+                } else if (transfer->type() == QRail::RouterEngine::Transfer::Type::ARRIVAL) {
+                    qDebug() << "ARRIVAL:"
+                             << transfer->time().time().toString("hh:mm")
+                             << transfer->station()->name().value(QLocale::Language::Dutch)
+                             << transfer->arrivalLeg()->vehicleInformation()->uri();
+                }
+            }
 
             if(m_routes.at(i)->departureDelay() != route->departureDelay() || m_routes.at(i)->arrivalDelay() != route->arrivalDelay()) {
                 qDebug() << "ROUTE AFFECTED, REPLACING...";
@@ -167,6 +192,10 @@ void Router::handleFinished(QRail::RouterEngine::Journey *journey)
     m_planner->unwatchAll();
     m_planner->watch(journey);
     qDebug() << "Finished routing";
+    m_after = QDateTime::currentMSecsSinceEpoch();
+    qDebug() << "AFTER:" << m_after;
+    qDebug() << "BEFORE:" << m_before;
+    emit this->benchmark(m_after - m_before);
     this->setBusy(false);
 }
 
@@ -176,6 +205,12 @@ void Router::handleProcessing(const QUrl &uri)
     QUrlQuery query = QUrlQuery(uri);
     QDateTime timestamp = QDateTime::fromString(query.queryItemValue("departureTime"), Qt::ISODate);
     emit this->processing(uri.toString(), timestamp);
+}
+
+void Router::updateReceived(qint64 time)
+{
+    this->setBusy(true);
+    m_before = time;
 }
 
 // Getters & Setters

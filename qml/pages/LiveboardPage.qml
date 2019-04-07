@@ -23,8 +23,7 @@ import Sailfish.Silica 1.0 // Needs porting to UC
 import LCRail.Views.Liveboard 1.0
 
 Page {
-    property date _before
-    property date _after
+    property int _benchmarkTime
     property string _stationURI
     property string _stationName
 
@@ -39,14 +38,18 @@ Page {
     }
 
     function getData() {
-        _before = new Date();
         if(_stationURI.indexOf("http://irail.be/stations/NMBS/") !== -1) { // QRail should validate the URI itself TO DO
             header.title = "Loading ...";
             liveboard.abortCurrentOperation();
             liveboard.clearBoard();
-            departureTime.setFullYear(2019); // Reproduction data
+            var departureTime = new Date();
+            departureTime.setFullYear(2019); // Reproduction data 31/03/2019
             departureTime.setMonth(2);
             departureTime.setDate(31);
+            departureTime.setHours(14); // 14:00:00.000Z
+            departureTime.setMinutes(0);
+            departureTime.setSeconds(0);
+            departureTime.setMilliseconds(0);
             console.debug("Fetching liveboard of:" + departureTime.toISOString());
             console.warn("$,liveboard," + new Date());
             liveboard.getBoard(_stationURI, departureTime);
@@ -102,15 +105,13 @@ Page {
             id: liveboard
             onBusyChanged: {
                 if(!busy) {
-                    console.warn("$,liveboard," + new Date());
-                    _after = new Date();
-                    header.benchmark = _after.getTime() - _before.getTime() + " ms";
+                    console.warn("$,liveboard," + _benchmarkTime);
+                    header.benchmark = _benchmarkTime + " ms";
+                    //header.benchmark = _after - _before + " ms";
                     header.title = _stationName;
                 }
-                else {
-                    _before = new Date();
-                }
             }
+            onBenchmark: _benchmarkTime = time;
             onProcessing: header.benchmark = timestamp.toLocaleString(Qt.locale(), "HH:mm dd/MM/yyyy")
         }
 
