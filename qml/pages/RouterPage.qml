@@ -24,11 +24,8 @@ import "../js/utils.js" as Utils
 Page {
     property string from
     property string to
-    property date departureTime: new Date()
     property int maxTransfers: 4
-
-    property date _before
-    property date _after
+    property int _benchmarkTime
 
     // For performance reasons we wait until the Page is fully loaded before doing an API request
     onStatusChanged: {
@@ -42,9 +39,17 @@ Page {
 
     function getData() {
         console.log("Fetching connections")
-        _before = new Date();
         console.warn("$,router," + new Date());
         if(from.length > 0 && to.length > 0) {
+            var departureTime = new Date();
+            departureTime.setFullYear(2019); // 31/3/2019 14:00:00.000Z
+            departureTime.setMonth(2);
+            departureTime.setDate(31);
+            departureTime.setHours(14);
+            departureTime.setMinutes(0);
+            departureTime.setSeconds(0);
+            departureTime.setMilliseconds(0);
+            console.log("ROUTER QML:" + departureTime);
             router.getConnections(from, to, departureTime, maxTransfers);
         }
         else {
@@ -78,15 +83,12 @@ Page {
                     id: router
                     onBusyChanged: {
                         if(!busy) {
-                            console.warn("$,router," + new Date());
-                            _after = new Date();
-                            header.description = _after.getTime() - _before.getTime() + " ms";
-                        }
-                        else {
-                            _before = new Date();
+                            console.warn("$,router," + _benchmarkTime);
+                            header.description = _benchmarkTime + " ms";
                         }
                     }
                     onProcessing: header.description = timestamp.toLocaleString(Qt.locale(), "HH:mm dd/MM/yyyy")
+                    onBenchmark: _benchmarkTime = time;
                 }
                 VerticalScrollDecorator {}
             }

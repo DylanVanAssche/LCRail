@@ -97,13 +97,17 @@ signals:
     void processing(const QString &uri, const QDateTime &timestamp);
     void error(const QString &message);
     void finished();
+    void benchmark(qint64 time);
 
 private slots:
     void handleStream(QRail::VehicleEngine::Vehicle *entry);
     void handleProcessing(const QUrl &uri);
     void handleFinished(QRail::LiveboardEngine::Board *board);
+    void updateReceived(qint64 timestamp);
 
 private:
+    qint64 m_before;
+    qint64 m_after;
     bool m_busy;
     bool m_valid;
     bool m_creating;

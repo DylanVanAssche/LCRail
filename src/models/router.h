@@ -57,16 +57,20 @@ public:
 signals:
     void busyChanged();
     void processing(const QString &uri, const QDateTime &timestamp);
+    void benchmark(qint64 time);
 
 private slots:
     void handleStream(QRail::RouterEngine::Route *route);
     void handleFinished(QRail::RouterEngine::Journey *journey);
     void handleProcessing(const QUrl &uri);
+    void updateReceived(qint64 time);
 
 protected:
     QHash<int, QByteArray> roleNames() const override;
 
 private:
+    qint64 m_before;
+    qint64 m_after;
     QRail::RouterEngine::Planner *m_planner;
     QList<QRail::RouterEngine::Route *> m_routes;
     bool m_busy;

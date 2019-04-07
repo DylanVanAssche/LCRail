@@ -40,6 +40,7 @@ Liveboard::Liveboard(QObject *parent): QAbstractListModel(parent)
             SIGNAL(error(QString)),
             this,
             SIGNAL(error(QString)));
+    connect(m_factory, SIGNAL(updateReceived(qint64)), this, SLOT(updateReceived(qint64)));
 
     // Init variables
     m_entries = QList<QRail::VehicleEngine::Vehicle *>();
@@ -54,19 +55,23 @@ void Liveboard::getBoard(QRail::StationEngine::Station *station,
                          const QRail::LiveboardEngine::Board::Mode &mode)
 {
     this->setBusy(true);
+    m_before = QDateTime::currentMSecsSinceEpoch();
     m_factory->getLiveboardByStationURI(station->uri(), mode);
 }
 
 void Liveboard::getBoard(const QUrl &uri, const QRail::LiveboardEngine::Board::Mode &mode)
 {
     this->setBusy(true);
+    m_before = QDateTime::currentMSecsSinceEpoch();
     m_factory->getLiveboardByStationURI(uri, QDateTime::currentDateTimeUtc(), QDateTime::currentDateTimeUtc().addSecs(6*1800), mode);
 }
 
 void Liveboard::getBoard(const QUrl &uri, const QDateTime departureTime, const QRail::LiveboardEngine::Board::Mode &mode)
 {
     this->setBusy(true);
-    m_factory->getLiveboardByStationURI(uri, departureTime, departureTime.addSecs(3 * 3600), mode);
+    m_before = QDateTime::currentMSecsSinceEpoch();
+    qDebug() << departureTime;
+    m_factory->getLiveboardByStationURI(uri, departureTime.toUTC(), departureTime.toUTC().addSecs(3 * 3600), mode);
 }
 
 void Liveboard::clearBoard()
@@ -272,9 +277,20 @@ void Liveboard::handleFinished(QRail::LiveboardEngine::Board *board)
 
     // A complete liveboard is ready
     this->setValid(true);
+    m_after = QDateTime::currentMSecsSinceEpoch();
+    qDebug() << "AFTER:" << m_after;
+    qDebug() << "BEFORE:" << m_before;
+    emit this->benchmark(m_after - m_before);
 
     // Task finished
     this->setBusy(false);
+}
+
+void Liveboard::updateReceived(qint64 timestamp)
+{
+    // Benchmark must measure the time from the update receivement until the change is shown to the user.
+    this->setBusy(true); // Triggers benchmark
+    m_before = timestamp;
 }
 
 // Getters & Setters
