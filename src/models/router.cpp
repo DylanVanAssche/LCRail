@@ -20,8 +20,8 @@ Router::Router(QObject *parent) : QAbstractListModel(parent)
 {
     // Register custom types to the Qt meta object system
     qRegisterMetaType<Trip *>("Trip *");
-    qRegisterMetaType<QRail::RouterEngine::Route *>("QRail::RouterEngine::Route *");
-    qRegisterMetaType<QList<QRail::RouterEngine::Route *>>("QList<QRail::RouterEngine::Route *>");
+    qRegisterMetaType<QSharedPointer<QRail::RouterEngine::Route> >("QRail::RouterEngine::Route *");
+    qRegisterMetaType<QList<QSharedPointer<QRail::RouterEngine::Route> >>("QList<QRail::RouterEngine::Route *>");
     qRegisterMetaType<QRail::VehicleEngine::Vehicle *>("QRail::VehicleEngine::Vehicle *");
 
     // Retrieve the QRail::RouterEngine::Planner instance and connect its signals
@@ -31,9 +31,9 @@ Router::Router(QObject *parent) : QAbstractListModel(parent)
             this,
             SLOT(handleFinished(QRail::RouterEngine::Journey *)));
     connect(m_planner,
-            SIGNAL(stream(QRail::RouterEngine::Route *)),
+            SIGNAL(stream(QSharedPointer<QRail::RouterEngine::Route>)),
             this,
-            SLOT(handleStream(QRail::RouterEngine::Route *)));
+            SLOT(handleStream(QSharedPointer<QRail::RouterEngine::Route>)));
     connect(m_planner,
             SIGNAL(processing(QUrl)),
             this,
@@ -41,7 +41,7 @@ Router::Router(QObject *parent) : QAbstractListModel(parent)
     connect(m_planner, SIGNAL(updateReceived(qint64)), this, SLOT(updateReceived(qint64)));
 
     // Init variables
-    m_routes = QList<QRail::RouterEngine::Route *>();
+    m_routes = QList<QSharedPointer<QRail::RouterEngine::Route> >();
     m_busy = false;
 }
 
@@ -107,7 +107,7 @@ void Router::abortCurrentOperation()
     }
 }
 
-void Router::handleStream(QRail::RouterEngine::Route *route)
+void Router::handleStream(QSharedPointer<QRail::RouterEngine::Route> route)
 {
     qDebug() << "***************** CSA STREAM ********************";
     qDebug() << "Inserting:" << route->departureTime() << "|" << route->arrivalTime();

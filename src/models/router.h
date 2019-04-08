@@ -27,6 +27,7 @@
 #include <QtCore/QList>
 #include <QtCore/QHash>
 #include <QtCore/QByteArray>
+#include <QtCore/QSharedPointer>
 
 #include "engines/router/routerplanner.h"
 #include "engines/router/routerroute.h"
@@ -60,7 +61,7 @@ signals:
     void benchmark(qint64 time);
 
 private slots:
-    void handleStream(QRail::RouterEngine::Route *route);
+    void handleStream(QSharedPointer<QRail::RouterEngine::Route> route);
     void handleFinished(QRail::RouterEngine::Journey *journey);
     void handleProcessing(const QUrl &uri);
     void updateReceived(qint64 time);
@@ -72,7 +73,7 @@ private:
     qint64 m_before;
     qint64 m_after;
     QRail::RouterEngine::Planner *m_planner;
-    QList<QRail::RouterEngine::Route *> m_routes;
+    QList<QSharedPointer<QRail::RouterEngine::Route> > m_routes;
     bool m_busy;
     bool m_isCancelled;
     void setBusy(const bool &busy);
