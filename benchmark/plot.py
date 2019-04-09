@@ -168,14 +168,16 @@ if __name__ == "__main__":
     plt.xlabel("Time (s)")
     plt.ylabel("Usage (%)")
     plt.ylim(0, 100)
-    plt.plot(top.timeline, top.cpu)
-    plt.plot(top.timeline, top.mem)
+    plt.plot(top.timeline, top.cpu, label="CPU")
+    plt.plot(top.timeline, top.mem, label="RAM")
+    plt.legend()
     plt.show()
 
     # Network usage
     plt.title("Network usage")
     plt.xlabel("Time (s)")
     plt.ylabel("Usage (MB)")
+    plt.ylim(0, 10)
     plt.plot(nethogs.timeline, nethogs.sent, label="Sent")
     plt.plot(nethogs.timeline, nethogs.received, label="Received")
     plt.legend()
@@ -184,6 +186,7 @@ if __name__ == "__main__":
     # Liveboard refresh time
     plt.title("Liveboard refresh time")
     plt.ylabel("Time (ms)")
+    plt.ylim(0, 15000)
     plt.xlabel("Measurement")
     #plt.boxplot(user_informed_time.liveboard)
     plt.bar(range(0, len(user_informed_time.liveboard)), user_informed_time.liveboard)
@@ -192,6 +195,7 @@ if __name__ == "__main__":
     # Planner refresh time
     plt.title("Planner refresh time")
     plt.ylabel("Time (ms)")
+    plt.ylim(0, 30000)
     plt.xlabel("Measurement")
     plt.bar(range(0, len(user_informed_time.planner)), user_informed_time.planner)
     #plt.boxplot(user_informed_time.planner)
