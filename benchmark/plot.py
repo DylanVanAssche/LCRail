@@ -1,6 +1,9 @@
 #!/bin/python
 import argparse
 import matplotlib.pyplot as plt
+import glob
+import sys
+import statistics
 from datetime import datetime
 
 
@@ -48,9 +51,8 @@ class NethogsParser(BaseParser):
                     self._sent.append(float(sent))
                     self._received.append(float(received))
             except Exception as e:
-                print("ERROR: {} for parsing line: {}".format(e, line))
+                print("\nERROR: {} for parsing line: {} in file {}".format(e, line, self._input_file), file=sys.stderr)
         self.convert_timestamps()
-        print("Nethogs lines: {}".format(len(self._sent)))
 
     @property
     def sent(self):
@@ -75,9 +77,8 @@ class TopParser(BaseParser):
                     self._cpu.append(float(cpu))
                     self._mem.append(float(mem))
             except Exception as e:
-                print("ERROR: {} for parsing line: {}".format(e, line))
+                print("\nERROR: {} for parsing line: {} in file {}".format(e, line, self._input_file), file=sys.stderr)
         self.convert_timestamps()
-        print("Top lines: {}".format(len(self._cpu)))
 
     @property
     def cpu(self):
@@ -100,15 +101,16 @@ class UserInformedTimeParser(BaseParser):
             try:
                 if "$" in line:
                     _, name, timestamp = line.split(",")
-                    print(timestamp)
                     if "liveboard" in name:
                         self._liveboard.append(abs(int(timestamp)))
                     elif "router" in name:
                         self._planner.append(abs(int(timestamp)))
                     else:
                         raise NotImplementedError("Unknown benchmark name")
+            except ValueError as e:
+                pass # Ignore unused log 
             except Exception as e:
-                print("ERROR: {} for parsing line: {}".format(e, line))
+                print("\nERROR: {} for parsing line: {} in file {}".format(e, line, self._input_file), file=sys.stderr)
 
     @property
     def liveboard(self):
@@ -122,56 +124,269 @@ class UserInformedTimeParser(BaseParser):
 if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser(description="LCRail benchmark.")
-    parser.add_argument("name",
-                        type=str,
-                        help="The name of the benchmark file, for example: <process>-top-<name>.txt")
     parser.add_argument("process",
                         type=str,
                         help="The name of the benchmarked process , for example: <process>-top-<name>.txt")
     args = parser.parse_args()
     process = args.process
-    name = args.name
-    print("Process: {}".format(process))
-    print("Name: {}".format(name))
+    print("Benchmarking process: {}".format(process))
 
+    data = {}
+    files = glob.glob("results/**/**/**/*.txt", recursive=True)
+    for i, path in enumerate(files):
+        percentage = ((i + 1) / len(files)) * 100
+        sys.stdout.write('\r')
+        sys.stdout.write("[%-100s] %d%%" % ('=' * int(percentage), percentage))
+        sys.stdout.flush()
+        _, benchmark, part, device, filename = path.split("/")
 
-    # Parse Nethogs
-    nethogs = NethogsParser("{}-nethogs-{}.txt".format(process, name), process)
-    nethogs.parse()
+        # Create data tree
+        if not benchmark in data:
+            data[benchmark] = {}
 
-    # Parse Top
-    top = TopParser("{}-top-{}.txt".format(process, name), process)
-    top.parse()
+        if not part in data[benchmark]:
+            data[benchmark][part] = {}
 
-    # Parse User Informed Time
-    user_informed_time = UserInformedTimeParser("{}-{}.txt".format(process, name))
-    user_informed_time.parse()
+        if not device in data[benchmark][part]:
+            data[benchmark][part][device] = {}
+
+        # Nethogs file
+        if "nethogs" in path:
+            nethogs = NethogsParser(path, process)
+            nethogs.parse()
+            data[benchmark][part][device]["nethogs"] = {
+                                                            "sent": nethogs.sent,
+                                                            "received": nethogs.received,
+                                                            "timeline": nethogs.timeline
+                                                       }
+
+        # Top file
+        elif "top" in path:
+            top = TopParser(path, process)
+            top.parse()
+            data[benchmark][part][device]["top"] = {
+                                                        "cpu": top.cpu,
+                                                        "mem": top.mem,
+                                                        "timeline": top.timeline
+                                                   }
+        else:
+            user_informed_time = UserInformedTimeParser(path)
+            user_informed_time.parse()
+            data[benchmark][part][device]["user_informed_time"] = {}
+
+            # Liveboard data
+            if user_informed_time.liveboard:
+                data[benchmark][part][device]["user_informed_time"]["liveboard"] = user_informed_time.liveboard
+                data[benchmark][part][device]["user_informed_time"]["timeline"] = len(user_informed_time.liveboard)
+
+            # Planner data
+            if user_informed_time.planner:
+                data[benchmark][part][device]["user_informed_time"]["planner"] = user_informed_time.planner
+                data[benchmark][part][device]["user_informed_time"]["timeline"] = len(user_informed_time.planner)
+
+    ROUNDING = 1
+    TEXT_DISTANCE = 0.5
+
 
     # CPU usage
-    plt.title("CPU usage")
+    plt.title("CPU usage liveboard")
     plt.xlabel("Time (s)")
     plt.ylabel("Usage (%)")
-    plt.ylim(0, 100)
-    plt.plot(top.timeline, top.cpu)
+    plt.ylim(0, 20)
+    cpu_count = 0
+    position = {
+        "original": {
+            "base": 2,
+            "width": 0.5,
+            "xperia-x": -0.25,
+            "jolla-1": 0.25
+        },
+        "rt-poll": {
+            "base": 4,
+            "width": 0.5,
+            "xperia-x": -0.25,
+            "jolla-1": 0.25
+        },
+        "rt-sse": {
+            "base": 6,
+            "width": 0.5,
+            "xperia-x": -0.25,
+            "jolla-1": 0.25
+        }
+    }
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "liveboard" in part:
+                for device in data[benchmark][part]:
+                    if "top" in data[benchmark][part][device]:
+                        mean = statistics.mean(data[benchmark][part][device]["top"]["cpu"])
+                        color = "r"
+                        if "jolla" in device:
+                            color = "b"
+                        b = plt.bar(position[benchmark]["base"] + position[benchmark][device], mean,
+                                    width=0.5,
+                                    label=(benchmark + "@" + device),
+                                   align="center", color=color)
+                        # access the bar attributes to place the text in the appropriate location
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING),
+                                     va="center", fontweight="bold")
+                        cpu_count += 1
+    plt.legend()
     plt.show()
 
     # RAM usage
-    plt.title("RAM usage")
+    plt.title("RAM usage liveboard")
     plt.xlabel("Time (s)")
     plt.ylabel("Usage (%)")
-    plt.ylim(0, 25)
-    plt.plot(top.timeline, top.mem)
-    plt.show()
-
-    # CPU and RAM usage
-    plt.title("CPU and RAM usage")
-    plt.xlabel("Time (s)")
-    plt.ylabel("Usage (%)")
-    plt.ylim(0, 100)
-    plt.plot(top.timeline, top.cpu, label="CPU")
-    plt.plot(top.timeline, top.mem, label="RAM")
+    plt.ylim(0, 20)
+    mem_count = 0
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "liveboard" in part:
+                for device in data[benchmark][part]:
+                    if "top" in data[benchmark][part][device]:
+                        mean = statistics.mean(data[benchmark][part][device]["top"]["mem"])
+                        b = plt.bar(mem_count, mean, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING),
+                                     va="center", fontweight="bold")
+                        mem_count += 1
     plt.legend()
     plt.show()
+
+    # CPU usage
+    plt.title("CPU usage planner")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Usage (%)")
+    plt.ylim(0, 50)
+    cpu_count = 0
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "planner" in part:
+                for device in data[benchmark][part]:
+                    if "top" in data[benchmark][part][device]:
+                        mean = statistics.mean(data[benchmark][part][device]["top"]["cpu"])
+                        b = plt.bar(cpu_count, mean, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        cpu_count += 1
+    plt.legend()
+    plt.show()
+
+    # RAM usage
+    plt.title("RAM usage planner")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Usage (%)")
+    plt.ylim(0, 20)
+    mem_count = 0
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "planner" in part:
+                for device in data[benchmark][part]:
+                    if "top" in data[benchmark][part][device]:
+                        mean = statistics.mean(data[benchmark][part][device]["top"]["mem"])
+                        b = plt.bar(mem_count, mean, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        mem_count += 1
+    plt.legend()
+    plt.show()
+
+    # Network usage
+    plt.title("Network usage Planner")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Usage (%)")
+    #plt.ylim(0, 20)
+    network_count = 0
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "planner" in part:
+                for device in data[benchmark][part]:
+                    if "nethogs" in data[benchmark][part][device]:
+                        total_sent = data[benchmark][part][device]["nethogs"]["sent"][-1]
+                        total_received = data[benchmark][part][device]["nethogs"]["received"][-1]
+                        b = plt.bar(network_count, total_sent, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        b = plt.bar(network_count + 1, total_received, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        network_count += 2
+    plt.legend()
+    plt.show()
+
+    # Network usage
+    plt.title("Network usage Liveboard")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Usage (%)")
+    #plt.ylim(0, 20)
+    network_count = 0
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "liveboard" in part:
+                for device in data[benchmark][part]:
+                    if "nethogs" in data[benchmark][part][device]:
+                        total_sent = data[benchmark][part][device]["nethogs"]["sent"][-1]
+                        total_received = data[benchmark][part][device]["nethogs"]["received"][-1]
+                        b = plt.bar(network_count, total_sent, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        b = plt.bar(network_count + 1, total_received, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        network_count += 2
+    plt.legend()
+    plt.show()
+
+    # Refresh time 
+    plt.title("Refresh time Liveboard")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Usage (%)")
+    #plt.ylim(0, 20)
+    refresh_count = 0
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "liveboard" in part:
+                for device in data[benchmark][part]:
+                    if "user_informed_time" in data[benchmark][part][device]:
+                        refresh_time = statistics.mean(data[benchmark][part][device]["user_informed_time"]["liveboard"])
+                        b = plt.bar(refresh_count, refresh_time, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        refresh_count += 1
+    plt.legend()
+    plt.show()
+
+    # Refresh time 
+    plt.title("Refresh time Planner")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Usage (%)")
+    #plt.ylim(0, 20)
+    refresh_count = 0
+    for benchmark in data:
+        for part in data[benchmark]:
+            if "planner" in part:
+                for device in data[benchmark][part]:
+                    if "user_informed_time" in data[benchmark][part][device]:
+                        refresh_time = statistics.mean(data[benchmark][part][device]["user_informed_time"]["planner"])
+                        b = plt.bar(refresh_count, refresh_time, label=(benchmark + "@" + device))
+                        for bar in b:
+                            yval = bar.get_height()
+                            plt.text(bar.get_x(), yval + TEXT_DISTANCE, round(yval, ROUNDING))
+                        refresh_count += 1
+    plt.legend()
+    plt.show()
+    exit()
 
     # Network usage
     plt.title("Network usage")
