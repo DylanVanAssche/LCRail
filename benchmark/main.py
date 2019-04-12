@@ -75,10 +75,14 @@ class Main():
         p.plot_top("planner", "mem")
 
         # Network usage
-        p.plot_nethogs("liveboard", "sent")
-        p.plot_nethogs("liveboard", "received")
-        p.plot_nethogs("planner", "sent")
-        p.plot_nethogs("planner", "received")
+        p.plot_nethogs_mean("liveboard", "sent")
+        p.plot_nethogs_mean("liveboard", "received")
+        p.plot_nethogs_mean("planner", "sent")
+        p.plot_nethogs_mean("planner", "received")
+        p.plot_nethogs_all("liveboard", "sent")
+        p.plot_nethogs_all("liveboard", "received")
+        p.plot_nethogs_all("planner", "sent")
+        p.plot_nethogs_all("planner", "received")
 
         # Refresh time
         p.plot_user_informed_time("liveboard")
