@@ -16,10 +16,9 @@
 */
 
 import QtQuick 2.2
-import "../UC"
 import "../components"
 import "../components/liveboard"
-import Sailfish.Silica 1.0 // Needs porting to UC
+import Sailfish.Silica 1.0
 import LCRail.Views.Liveboard 1.0
 
 Page {
@@ -73,7 +72,7 @@ Page {
         }
     }
 
-    PlatformListView {
+    SilicaListView {
         id: entriesList
 
         property real _previousContentY

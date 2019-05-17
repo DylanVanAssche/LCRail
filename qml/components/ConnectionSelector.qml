@@ -17,7 +17,6 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-import "../UC"
 
 Column {
     width: parent.width
@@ -37,7 +36,7 @@ Column {
             id: selectors
             width: parent.width*(2/3)
 
-            BackgroundRectangle {
+            BackgroundItem {
                 width: parent.width
 
                 Label {
@@ -53,7 +52,7 @@ Column {
                 }
             }
 
-            BackgroundRectangle {
+            BackgroundItem {
                 width: parent.width
 
                 Label {
@@ -70,7 +69,7 @@ Column {
             }
         }
 
-        BackgroundRectangle {
+        BackgroundItem {
             width: parent.width/3
             height: selectors.height
 

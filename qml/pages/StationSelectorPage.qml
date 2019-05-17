@@ -17,7 +17,6 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-import "../UC"
 import "../components"
 import "../components/station"
 import LCRail.Views.Stations 1.0

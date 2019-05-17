@@ -16,12 +16,12 @@
 */
 
 import QtQuick 2.2
-import "../UC"
+import Sailfish.Silica 1.0
 import "../components"
 import LCRail.Views.Liveboard 1.0
 
 Page {
-    PlatformFlickable {
+    SilicaFlickable {
         anchors.fill: parent
         contentHeight: column.height
 
@@ -32,7 +32,7 @@ Page {
 
             PageHeader {
                 title: "LCRail"
-                menu: Menu {}
+                Menu {}
             }
 
             ConnectionSelector {

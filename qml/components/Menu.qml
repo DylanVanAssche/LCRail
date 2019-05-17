@@ -15,23 +15,9 @@
 *   along with LCRail.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import "../UC"
+import Sailfish.Silica 1.0
 
-TopMenu {
-    /*MenuItem {
-        text: "About"
-        onClicked: {
-            console.log("About clicked!")
-        }
-    }*/
-
-    /*MenuItem {
-        text: "Vehicle"
-        onClicked: {
-            console.log("Vehicle clicked!")
-        }
-    }*/
-
+PullDownMenu {
     MenuItem {
         text: "Liveboard"
         onClicked: {

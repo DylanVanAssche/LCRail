@@ -17,7 +17,6 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-import "../../UC" // Needs porting to UC
 
 Rectangle {
     //: Liveboard title
@@ -77,7 +76,7 @@ Rectangle {
         text: benchmark
     }
 
-    BackgroundRectangle {
+    BackgroundItem {
         anchors.fill: parent
         onClicked: selectStation()
     }
