@@ -2,7 +2,3 @@
 	path = QRail
 	url = https://github.com/DylanVanAssche/QRail.git
 	branch = develop
-[submodule "universal-components"]
-	path = qml/universal-components
-	url = https://github.com/M4rtinK/universal-components.git
-	branch = master
