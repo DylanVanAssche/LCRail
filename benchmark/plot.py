@@ -24,9 +24,9 @@ class Plotter():
         plt.rcParams["figure.figsize"] = [8, 5]
 
     def legend_bar(self):
-        custom_lines = [Line2D([0], [0], color=COLOR_XPERIA_X, lw=4),
-                        Line2D([0], [0], color=COLOR_JOLLA_1, lw=4)]
-        plt.legend(custom_lines, ["Xperia X", "Jolla 1"])
+        custom_lines = [Line2D([0], [0], color=COLOR_JOLLA_1, lw=4),
+                        Line2D([0], [0], color=COLOR_XPERIA_X, lw=4)]
+        plt.legend(custom_lines, ["Jolla 1", "Xperia X"])
 
     def legend_plot(self):
         custom_lines = [Line2D([0], [0], color=COLOR_ORIGINAL, lw=4),

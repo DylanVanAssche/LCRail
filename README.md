@@ -10,6 +10,16 @@ LCRail is a Linked Connections client written in Qt 5 and Silica QML.
 - **Recalculating**: Never refresh your view! LCRail automatically updates and reroute your journey or liveboard.
 - **Notifications**: Changes to your liveboard or journey? LCRail will notify you with a notification.
 
+## Benchmarks
+
+The benchmarks are available in the `benchmarks` folder.
+This folder contains:
+
+- `benchmark.sh`: A Bash shell script to benchmark a device.
+- `main.py`, `plot.py` and `parser.py`: A Python script to plot the graphs from the benchmark data. The `Pipfile` can be used to install (`pipenv install`) all the dependencies in a virtual environment. To generate the graphs, run: `python3 main.py lcrail`
+- `results`: The verbose benchmark data can be found here for each implementation, type and device.
+- `*.png`: The generated graphs in PNG format.
+
 ## Build instructions
 
 In order to run LCRail you need to have a Sailfish OS device or use the Sailfish Emulator from the Sailfish IDE.
